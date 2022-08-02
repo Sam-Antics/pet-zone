@@ -17,15 +17,16 @@ Department.init(
         references: {
           model: 'staff',
           key: 'id'
+        }
       }
-      },
-      {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: "department",
-      }
+    },    
+    {
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: "department",
+    }
     );
     
     module.exports = { Department };

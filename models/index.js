@@ -57,7 +57,7 @@ Pet.hasMany(Grooming, {
     onDelete: 'SET NULL'
 });
 
-Grooming.belongsTo(Pet {
+Grooming.belongsTo(Pet, {
     foreignKey: 'pet_id',
     onDelete: 'SET NULL'
 });

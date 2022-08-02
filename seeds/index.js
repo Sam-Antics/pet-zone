@@ -1,10 +1,13 @@
 const seedStaff = require('./staff-seeds');
 const seedDepartments = require('./departments-seeds');
 const seedImmunizations = require('./immunizations-seeds');
+const seedGrooming = require('./grooming-seeds');
+const seedBoarding = require('./boarding-seeds');
 
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
+  // clinic-side table seeds
   await sequelize.sync({ force: true });
   console.log('\n===== DATABASE SYNCED =====\n-');
   await seedStaff();
@@ -12,7 +15,11 @@ const seedAll = async () => {
   await seedDepartments();
   console.log('\n===== DEPARTMENTS SEEDED =====\n');
   await seedImmunizations();
-  console.log('\n===== IMMUNIZATIONS SEEDED =====\n')
+  console.log('\n===== IMMUNIZATIONS SEEDED =====\n');
+  await seedGrooming();
+  console.log('\n===== GROOMING SEEDED =====\n');
+  await seedBoarding();
+  console.log('\n===== BOARDING SEEDED =====\n');
  // other seed tables here
 
   process.exit(0);

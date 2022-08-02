@@ -14,7 +14,7 @@ Immunization.init(
         type: DataTypes.STRING,
         allowNull: false
     },
-    code: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false
     },

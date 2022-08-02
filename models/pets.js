@@ -26,6 +26,12 @@ Pet.init(
     color: {
       type: DataTypes.STRING,
     },
+    allergies: {
+      type: DataTypes.STRING,
+    },
+    diet: {
+      type: DataTypes.TEXT
+    },
     owner_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -33,6 +39,11 @@ Pet.init(
         key: 'id'
     }
     },
+    immunization_id: {
+      type: DataTypes.INTEGER,
+      model: 'immunization',
+      key: 'id'
+    }
   },
   {
     sequelize,

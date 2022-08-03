@@ -1,4 +1,4 @@
-class Staff extends Model {}
+class Staff extends Model { }
 
 Staff.init(
   {
@@ -9,32 +9,30 @@ Staff.init(
       autoIncrement: true,
     },
     title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        salary: DataType.DECIMAL
+      type: DataTypes.STRING,
+      allowNull: false,
+      salary: DataType.DECIMAL
     },
     user_id: {
-        type: DataType.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id'
+      type: DataType.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
       }
-      },
-      comment_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'comment',
-          key: 'id'
+    },
+    comment_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'comment',
+        key: 'id'
       }
-      },
-      {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'staff'
-      }
-    );
-    
-    
-    module.exports = { Staff };
+    },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'staff'
+});
+
+
+module.exports = { Staff };

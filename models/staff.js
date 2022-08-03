@@ -1,4 +1,4 @@
-class Staff extends Model {}
+class Staff extends Model { }
 
 Staff.init(
   {
@@ -9,9 +9,9 @@ Staff.init(
       autoIncrement: true,
     },
     title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        salary: DataType.DECIMAL
+      type: DataTypes.STRING,
+      allowNull: false,
+      salary: DataType.DECIMAL
     },
     user_id: {
         type: DataType.INTEGER,
@@ -36,6 +36,6 @@ Staff.init(
     modelName: 'staff'
   }
 );
-    
-    
-    module.exports = { Staff };
+
+
+module.exports = { Staff };

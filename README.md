@@ -10,16 +10,26 @@ Project 2
 5. [Authors](#authors)
 
 ## Project Description
-
+PetZone is a web-based veterinary client management system which allows vet clinic staff to warehouse client records, as well as interact with the client and drive engagement with the practice.
 
 ### User Story
 ```
-AS AN owner of a veterinary practice,
-I WANT 
+AS A manager of a veterinary practice,
+I WANT a robust client management system
+SO THAT I can have a one-stop application for client management and engagement.
 ```
 ### Acceptance Criteria
 ```
-GIVEN a dashboard with login options
+GIVEN a web dashboard with login options,
+WHEN I get to the landing page,
+THEN I am prompted to log in to either the client side or management side of the application.
+WHEN logging into the clinic side of the application,
+THEN I can search for, select, and update client files.
+WHEN logging into the client side of the application,
+THEN I can see cards with pictures of each of the animals who are patients at the clinic.
+WHEN select on of my animals
+THEN I can see immunization records and any recent medical test results, as well as receivin interaction with the vet and/or staff.
+
 
 ```
 

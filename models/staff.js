@@ -14,21 +14,21 @@ Staff.init(
       salary: DataType.DECIMAL
     },
     user_id: {
-      type: DataType.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+        type: DataType.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id'
+        }
     },
-    comment_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'comment',
-        key: 'id'
-      }
-    },
-  },
-    {
+      comment_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'comment',
+          key: 'id'
+        }
+    }
+  },  
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,

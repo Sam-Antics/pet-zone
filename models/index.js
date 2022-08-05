@@ -4,7 +4,7 @@
 const User = require('./users');
 const Staff = require('./staff');
 // const Department = require('./departments');
-const Owner = require('./owners');
+// const Owner = require('./owners');
 const Pet = require('./pets');
 // const Comment = require('./comments');
 // const Immunization = require('./immunizations');
@@ -86,7 +86,7 @@ const Pet = require('./pets');
 
 
 
-module.exports = { User, Owner, Staff, Pet };
+module.exports = { User, Staff, Pet };
 
 
 

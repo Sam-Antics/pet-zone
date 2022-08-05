@@ -16,18 +16,18 @@ router.get('/:id', (req, res) => {
     Pet.findOne({
         where: {
             id: req.params.id
-        },
-        include: [
-            {
-                model: Owner,
-                attributes: ['user_id'],
-                include: {
-                    model: User,
-                    attributes: ['first_name', 'Last_name']
-                }
+        }
+        // include: [
+        //     {
+        //         model: Owner,
+        //         attributes: ['user_id'],
+        //         include: {
+        //             model: User,
+        //             attributes: ['first_name', 'Last_name']
+        //         }
 
-            }
-        ]
+        //     }
+        // ]
     })
     .then(dbPetData => {
         if (!dbPetData) {
@@ -45,7 +45,12 @@ router.get('/:id', (req, res) => {
 //allows a pet to be added to the database
 router.post('/', (req, res) => {
     Pet.create({
-
+        name: req.body.name,
+        type: req.body.type,
+        breed: req.body.breed,
+        age: req.body.age,
+        color: req.body.color,
+        owner_id: req.body.owner_id
     })
     .then(dbPetData => res.json(dbPetData))
     .catch(err => {

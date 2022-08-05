@@ -1,3 +1,6 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
 class Owner extends Model {}
 
 Owner.init(
@@ -9,14 +12,14 @@ Owner.init(
       autoIncrement: true,
     },
     user_id: {
-        type: DataType.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
           model: 'user',
           key: 'id'
       } 
     },
     pet_id: {
-        type: DataType.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
           model: 'pet',
           key: 'id'
@@ -27,8 +30,9 @@ Owner.init(
         references: {
           model: 'comment',
           key: 'id'
+        }
       }
-      },
+  },
       {
         sequelize,
         timestamps: false,

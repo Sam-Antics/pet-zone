@@ -11,8 +11,9 @@ Staff.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      salary: DataType.DECIMAL
     },
+    salary: {type: DataType.DECIMAL
+  },
     user_id: {
         type: DataType.INTEGER,
         references: {

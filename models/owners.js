@@ -43,4 +43,4 @@ Owner.init(
     );
     
     
-    module.exports = { Owner };
+    module.exports = Owner;

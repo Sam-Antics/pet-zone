@@ -38,4 +38,4 @@ Staff.init(
 );
 
 
-module.exports = { Staff };
+module.exports = Staff;

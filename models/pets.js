@@ -38,14 +38,16 @@ Pet.init(
         model: 'user',
         key: 'id'
     }
-    },
-    immunization_id: {
-      type: DataTypes.INTEGER,
-      model: 'immunization',
-      key: 'id'
-    }
-  },
-  {
+    },//set to take multiple immun
+  //   immunization_id: {
+  //     type: DataTypes.INTEGER,
+  //     references: {
+  //     model: 'immunization',
+  //     key: 'id'
+  //   }
+  // },
+  //add appt id
+  
     sequelize,
     timestamps: false,
     freezeTableName: true,

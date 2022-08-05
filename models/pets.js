@@ -56,4 +56,4 @@ Pet.init(
   }
 );
 
-module.exports = { Pet };
+module.exports = Pet;

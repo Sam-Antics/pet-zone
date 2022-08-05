@@ -16,14 +16,15 @@ Staff.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    salary: {type: DataType.DECIMAL
-  },
+    // salary: {
+    //   type: DataTypes.DECIMAL
+    // },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id'
-        }
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     }
     //   comment_id: {
     //     type: DataTypes.INTEGER,
@@ -32,7 +33,7 @@ Staff.init(
     //       key: 'id'
     //     }
     // }
-  },  
+  },
   {
     sequelize,
     timestamps: false,

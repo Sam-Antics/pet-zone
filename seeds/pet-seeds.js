@@ -197,8 +197,8 @@ const petData = [
         name: 'Pug',
         type: 'Beast',
         breed: 'Weasel',
-        age: 'Red',
-        color: '3',
+        age: '3',
+        color: 'red',
         owner_id: ''
     },
     {

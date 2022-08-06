@@ -17,11 +17,11 @@
       <nav>
         <a href="/">Home</a>
         <a href="/dashboard">dashboard</a>
-        {{!-- {{#if loggedIn}} --}}
+        {{#if loggedIn}}
         <button id="logout" class="btn-no-style">logout</button>
-        {{!-- {{else}} --}}
+        {{else}}
         <a href="/login">Login</a>
-        {{!-- {{/if}} --}}
+        {{/if}}
       </nav>
       <h1 class="app-title">PetZone</h1>
     </header>
@@ -34,9 +34,9 @@
     </footer>
   </div>
 
-  {{!-- {{#if loggedIn}} --}}
+  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  {{!-- {{/if}} --}}
+  {{/if}}
 
 </body>
 

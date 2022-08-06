@@ -82,9 +82,9 @@ const Owner = require('../models/owners');
 //     onDelete: 'SET NULL'
 //   });
   
-Pet.belongsTo(Owner, {
-  foreignKey: "owner_id",
-});
+// Pet.belongsTo(Owner, {
+//   foreignKey: "owner_id",
+// });
 
 // Appointments.hasMany(Pet, {
 //   foreignKey: "pet_id",

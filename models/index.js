@@ -1,10 +1,10 @@
 // import models
 
 const User = require('./users');
-const Staff = require('./staff');
+// const Staff = require('./staff');
 // const Department = require('./departments');
 // const Owner = require('./owners');
-const Pet = require('./pets');
+// const Pet = require('./pets');
 // const Comment = require('./comments');
 // const Immunization = require('./immunizations');
 // const Boarding = require('./boardings');
@@ -93,7 +93,7 @@ const Pet = require('./pets');
 //   foreignKey: "staff_id",
 // });
 
-module.exports = { User, Staff, Pet };
+module.exports = { User };
 
 
 //Future Options:

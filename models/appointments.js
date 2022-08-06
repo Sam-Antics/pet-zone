@@ -13,14 +13,14 @@ Appointment.init(
       //expects yyyy-mm-dd HH:MM:SS
     },
     pet_id: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         model: "pet",
         key: "id",
       },
     },
     staff_id: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         model: "staff",
         key: "id",

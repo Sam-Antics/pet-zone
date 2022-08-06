@@ -1,3 +1,6 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
 class Appointment extends Model {}
 
 Appointment.init(
@@ -13,14 +16,14 @@ Appointment.init(
       //expects yyyy-mm-dd HH:MM:SS
     },
     pet_id: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         model: "pet",
         key: "id",
       },
     },
     staff_id: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         model: "staff",
         key: "id",

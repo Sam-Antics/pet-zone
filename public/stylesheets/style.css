@@ -21,6 +21,11 @@ body {
     font-size: 16px;
 }
 
+main {
+    margin: 5% auto;
+    width: 94%;
+}
+
 header {
     background-color: #99b27f;
     text-align: center;
@@ -34,6 +39,34 @@ footer {
     align-items: baseline;
     padding: 1%;
     font-size: 110%;
+}
+
+/* CARDS */
+.card {
+    margin: 0 0 20px 0;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+}
+
+.your-pets {
+    height: 250px;
+    text-align: center;
+}
+
+.pet-info {
+    height: 500px;
+    text-align: center;
+}
+
+.card-header {
+    color: var(--primary);
+    background-color: var(--dark);
+    padding: 2.5%;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+}
+
+.card-body {
+    padding: 2.5%;
 }
 
 /* button */
@@ -118,4 +151,10 @@ footer {
 .form-div {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1540px;
+    }
 }

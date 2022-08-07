@@ -18,20 +18,13 @@ Owner.init(
           key: 'id'
       } 
     },
-    pet_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'pet',
-          key: 'id'
-      }
-      },
-      comment_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'comment',
-          key: 'id'
-        }
-      }
+      // comment_id: {
+      //   type: DataTypes.INTEGER,
+      //   references: {
+      //     model: 'comment',
+      //     key: 'id'
+      //   }
+      // }
   },
       {
         sequelize,

@@ -3,7 +3,9 @@
 const User = require('./users');
 const Staff = require('./staff');
 // const Department = require('./departments');
-// const Owner = require('./owners');
+
+const Owner = require('./owners');
+
 const Pet = require('./pets');
 // const Comment = require('./comments');
 // const Immunization = require('./immunizations');
@@ -21,27 +23,27 @@ const Pet = require('./pets');
 //     foreignKey: 'user_id'
 // });
 
+User.hasOne(Owner, {
+    foreignKey: "user_id"
+});
 
-// User.hasMany(Owner, {
-//     foreignKey: "user_id"
-// });
-
-// Owner.belongsTo(User, {
-//     foreignKey: 'user_id'
-// });
+Owner.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 
 // User.hasMany(Comment, {
 //     foreignKey: 'user_id',
 //     onDelete: 'SET NULL'
 // });
 
-// Owner.hasMany(Pet, {
-//     foreignKey: 'owner_id'
-// });
+User.hasMany(Pet, {
+    onDelete: 'CASCADE'
+});
 
-// Pet.belongsTo(Owner, {
-//     foreignKey: 'owner_id'
-// });
+Pet.belongsTo(Owner, {
+    foreignKey: 'owner_id',
+    onDelete: 'CASCADE'
+});
 
 // Pet.hasMany(Immunizaton, {
 //     foreignKey: 'pet_id'
@@ -93,7 +95,8 @@ const Pet = require('./pets');
 //   foreignKey: "staff_id",
 // });
 
-module.exports = { User, Staff, Pet };
+
+module.exports = { User, Staff, Pet, Owner };
 
 
 

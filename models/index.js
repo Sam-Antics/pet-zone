@@ -1,13 +1,12 @@
 // import models
-
 const User = require('./users');
 const Staff = require('./staff');
-// const Department = require('./departments');
-
 const Owner = require('./owners');
-
 const Pet = require('./pets');
-// const Comment = require('./comments');
+const Comment = require('./comments');
+
+
+// const Department = require('./departments');
 // const Immunization = require('./immunizations');
 // const Boarding = require('./boardings');
 // const Grooming = require('./groomings');
@@ -15,13 +14,13 @@ const Pet = require('./pets');
 
 //associations
 
-// User.hasMany(Staff, {
-//     foreignKey: "user_id"
-// });
+User.hasOne(Staff, {
+    foreignKey: "user_id"
+});
 
-// Staff.belongsTo(User, {
-//     foreignKey: 'user_id'
-// });
+Staff.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 
 User.hasOne(Owner, {
     foreignKey: "user_id"
@@ -31,12 +30,18 @@ Owner.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-// User.hasMany(Comment, {
-//     foreignKey: 'user_id',
-//     onDelete: 'SET NULL'
-// });
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+});
 
-User.hasMany(Pet, {
+Comment.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+  });
+
+
+Owner.hasMany(Pet, {
     onDelete: 'CASCADE'
 });
 
@@ -44,6 +49,7 @@ Pet.belongsTo(Owner, {
     foreignKey: 'owner_id',
     onDelete: 'CASCADE'
 });
+
 
 // Pet.hasMany(Immunizaton, {
 //     foreignKey: 'pet_id'
@@ -73,20 +79,6 @@ Pet.belongsTo(Owner, {
 //     onDelete: 'SET NULL'
 // });
 
-// Comment.belongsTo(User, {
-//     foreignKey: 'user_id',
-//     onDelete: 'SET NULL'
-//   });
-  
-//   User.hasMany(Comment, {
-//     foreignKey: 'user_id',
-//     onDelete: 'SET NULL'
-//   });
-  
-// Pet.belongsTo(Owner, {
-//   foreignKey: "owner_id",
-// });
-
 // Appointments.hasMany(Pet, {
 //   foreignKey: "pet_id",
 // });
@@ -96,7 +88,7 @@ Pet.belongsTo(Owner, {
 // });
 
 
-module.exports = { User, Staff, Pet, Owner };
+module.exports = { User, Staff, Pet, Owner, Comment };
 
 
 
@@ -130,5 +122,4 @@ module.exports = { User, Staff, Pet, Owner };
 //     onDelete: 'SET NULL'
 // });
 
-//module.exports = { User, Owner, Staff, Pet, Immunization, Comment, Boarding, Grooming, Department };
 

@@ -2,6 +2,7 @@ const seedUser = require('./user-seeds');
 const seedStaff = require('./staff-seeds');
 const seedOwner = require('./owners-seeds');
 const seedPet = require('./pet-seeds');
+
 // const seedDepartments = require('./departments-seeds');
 // const seedImmunizations = require('./immunizations-seeds');
 // const seedGrooming = require('./grooming-seeds');
@@ -32,7 +33,6 @@ const seedAll = async () => {
   // console.log('\n===== GROOMING SEEDED =====\n');
   // await seedBoarding();
   // console.log('\n===== BOARDING SEEDED =====\n');
-
   process.exit(0);
 };
 

@@ -16,6 +16,7 @@ router.get('/:id', (req, res) => {
     Pet.findOne({
         where: {
             id: req.params.id
+
         },
         include: [
             {

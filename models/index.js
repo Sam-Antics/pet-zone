@@ -3,7 +3,9 @@
 const User = require('./users');
 const Staff = require('./staff');
 // const Department = require('./departments');
+
 const Owner = require('./owners');
+
 const Pet = require('./pets');
 // const Comment = require('./comments');
 // const Immunization = require('./immunizations');
@@ -92,6 +94,7 @@ Pet.belongsTo(Owner, {
 // Appointments.hasMany(Staff, {
 //   foreignKey: "staff_id",
 // });
+
 
 module.exports = { User, Staff, Pet, Owner };
 

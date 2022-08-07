@@ -13,13 +13,13 @@ const Pet = require('./pets');
 
 //associations
 
-User.hasMany(Staff, {
-    foreignKey: "user_id"
-});
+// User.hasMany(Staff, {
+//     foreignKey: "user_id"
+// });
 
-Staff.belongsTo(User, {
-    foreignKey: 'user_id'
-});
+// Staff.belongsTo(User, {
+//     foreignKey: 'user_id'
+// });
 
 User.hasOne(Owner, {
     foreignKey: "user_id"

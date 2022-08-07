@@ -16,18 +16,19 @@ router.get('/:id', (req, res) => {
     Pet.findOne({
         where: {
             id: req.params.id
-        }
-        // include: [
-        //     {
-        //         model: Owner,
-        //         attributes: ['user_id'],
-        //         include: {
-        //             model: User,
-        //             attributes: ['first_name', 'Last_name']
-        //         }
 
-        //     }
-        // ]
+        },
+        include: [
+            {
+                model: Owner,
+                attributes: ['user_id'],
+                include: {
+                    model: User,
+                    attributes: ['first_name', 'last_name']
+                }
+
+            }
+        ]
     })
     .then(dbPetData => {
         if (!dbPetData) {

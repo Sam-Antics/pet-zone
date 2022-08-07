@@ -19,7 +19,6 @@ Staff.init(
     salary: {
       type: DataTypes.DECIMAL
     },
-
     user_id: {
       type: DataTypes.INTEGER,
       references: {

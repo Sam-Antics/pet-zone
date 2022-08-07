@@ -34,13 +34,14 @@ Owner.belongsTo(User, {
 //     onDelete: 'SET NULL'
 // });
 
-// Owner.hasMany(Pet, {
-//     foreignKey: 'owner_id'
-// });
+User.hasMany(Pet, {
+    onDelete: 'CASCADE'
+});
 
-// Pet.belongsTo(Owner, {
-//     foreignKey: 'owner_id'
-// });
+Pet.belongsTo(Owner, {
+    foreignKey: 'owner_id',
+    onDelete: 'CASCADE'
+});
 
 // Pet.hasMany(Immunizaton, {
 //     foreignKey: 'pet_id'

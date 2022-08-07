@@ -1,13 +1,19 @@
 const router = require('express').Router();
-const { Owner } = require('../../models');
+const { Owner, Pet } = require('../../models');
 
 //gets all owners
 router.get('/', (req, res) => {
     Owner.findAll({
         attributes: [
-         'user_id',
-         'pet_id'   
-        ]
+         'id',
+         'user_id' 
+        ],
+        // include: [
+        //     {
+        //         model: Pet,
+        //         attributes: ['id', 'name']
+        //     }
+        // ]
     })
         .then(dbOwnerData => res.json(dbOwnerData))
         .catch(err => {

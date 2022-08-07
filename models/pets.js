@@ -35,14 +35,14 @@ Pet.init(
     },
     diet: {
       type: DataTypes.TEXT
+    },
+    owner_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'owner',
+        key: 'id'
     }
-    // owner_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id'
-    // }
-    // },
+    },
     // immunization_id: {
     //   type: DataTypes.INTEGER,
     //   model: 'immunization',

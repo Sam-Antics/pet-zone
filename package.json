@@ -1,23 +1,4 @@
 {
-  "scripts": {
-    "start": "node server.js",
-    "seed": "node seeds/index.js"
-  },
-  "name": "pet-zone",
-  "description": "Project 2 ### Group Project 2",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sam-Antics/pet-zone.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sam-Antics/pet-zone/issues"
-  },
-  "homepage": "https://github.com/Sam-Antics/pet-zone#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
@@ -28,5 +9,24 @@
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.3"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "pet-zone",
+  "description": "Project 2 ### Group Project 2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sam-Antics/pet-zone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sam-Antics/pet-zone/issues"
+  },
+  "homepage": "https://github.com/Sam-Antics/pet-zone#readme"
 }

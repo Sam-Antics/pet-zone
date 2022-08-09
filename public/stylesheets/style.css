@@ -68,6 +68,21 @@ footer {
 .card-body {
     padding: 2.5%;
 }
+/* 404 page */
+
+.errpage {
+text-align: center;
+}
+
+.troll {
+    width: 40%;
+}
+
+.home {
+    position: absolute;
+    right: 25%;
+    bottom: 60%;
+}
 
 /* button */
 .btn {
@@ -118,6 +133,34 @@ footer {
     background-color: var(--tertiary);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
+}
+
+#home-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#home-card {
+    margin: 25px;
+    padding: 25px;
+}
+
+/* CAROUSEL */
+.carousel-item {
+    width: 200px;
+    height: 200px;
+}
+
+/* animations */
+.square{
+    position: relative;
+    width: 100px;
+    background-color: red;
+    left: 20%;
+}
+
+.trolly {
+    width: 100%;
 }
 
 /* FORM */

@@ -4,9 +4,9 @@ const { Comment, User } = require('../models');
 
 router.get('/', (req, res) => {
     res.render('landing', {
-        
     })
 })
+
 
 //comment routes
 router.get('/comments/:id', (req, res) => {
@@ -14,7 +14,7 @@ router.get('/comments/:id', (req, res) => {
 
     Comment.findOne({
         where: {
-        id: req.params.id
+            id: req.params.id
         },
         attributes: [
             'id',
@@ -24,24 +24,25 @@ router.get('/comments/:id', (req, res) => {
         ],
         include: [
             {
-            model: User,
-            attributes: ['email']
+                model: User,
+                attributes: ['email']
             }
+
         
     ]
 })
 .then(dbCommentData => {
     if (!dbCommentData) {
         res.status(404).json({ message: "No comments found" });
+
         return;
     }
-    const comment = dbCommentData.get({ plain: true });
-    res.render('comments', { comment });
-})
-.catch(err => {
-    console.log(err);
-    res.status(500).json(err);
+    res.render('login');
 });
+
+router.get('/signup', (req, res) => {
+    res.render('signup');
+
 });
 
 module.exports = router;

@@ -68,6 +68,21 @@ footer {
 .card-body {
     padding: 2.5%;
 }
+/* 404 page */
+
+.errpage {
+text-align: center;
+}
+
+.troll {
+    width: 40%;
+}
+
+.home {
+    position: absolute;
+    right: 25%;
+    bottom: 60%;
+}
 
 /* button */
 .btn {
@@ -134,6 +149,18 @@ footer {
 .carousel-item {
     width: 200px;
     height: 200px;
+}
+
+/* animations */
+.square{
+    position: relative;
+    width: 100px;
+    background-color: red;
+    left: 20%;
+}
+
+.trolly {
+    width: 100%;
 }
 
 /* FORM */

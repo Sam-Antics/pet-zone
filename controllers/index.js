@@ -5,8 +5,6 @@ const loginRoutes = require('./login-routes');
 const dashboardRoutes = require('./dashboard-routes');
 const homeRoutes = require('./home-routes');
 
-const dashboardRoutes = require('./dashboard-routes');
-
 const { use } = require('./api/');
 
 

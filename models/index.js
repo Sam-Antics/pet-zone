@@ -5,7 +5,6 @@ const Owner = require('./owners');
 const Pet = require('./pets');
 const Comment = require('./comments');
 
-
 // const Department = require('./departments');
 // const Immunization = require('./immunizations');
 // const Boarding = require('./boardings');
@@ -38,7 +37,7 @@ User.hasMany(Comment, {
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'SET NULL'
-  });
+});
 
 
 Owner.hasMany(Pet, {
@@ -121,5 +120,3 @@ module.exports = { User, Staff, Pet, Owner, Comment };
 //     foreignKey: 'pet_id',
 //     onDelete: 'SET NULL'
 // });
-
-

@@ -131,9 +131,21 @@ footer {
 }
 
 /* CAROUSEL */
-.carousel-item {
+.pet-family, #title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pet-images {
+    display: flex;
+    justify-content: center;
+}
+
+.img-thumbnail {
     width: 200px;
     height: 200px;
+    margin: 30px;
 }
 
 /* FORM */

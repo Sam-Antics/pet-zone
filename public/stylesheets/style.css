@@ -75,7 +75,7 @@ text-align: center;
 }
 
 .troll {
-    width: 50%;
+    width: 40%;
 }
 
 .home {
@@ -149,6 +149,18 @@ text-align: center;
 .carousel-item {
     width: 200px;
     height: 200px;
+}
+
+/* animations */
+.square{
+    position: relative;
+    width: 100px;
+    background-color: red;
+    left: 20%;
+}
+
+.trolly {
+    width: 100%;
 }
 
 /* FORM */

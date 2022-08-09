@@ -1,15 +1,16 @@
 anime({
     targets: '.square',
     keyframes: [
-        {translateX: 1130},
+        {translateX: 1020},
         {rotateY: 180},
         {translateX: 0},
         {rotateY: 0}
       ],
-    easing: 'easeInOutSine',
+    easing: 'linear',
     loop: true,
-    duration: 8000
+    duration: 12000
 });
+
 
 anime({
   targets: '.tiny-square',
@@ -20,7 +21,7 @@ anime({
   ],
   easing: 'easeInOutSine',
   loop: true,
-  duration: 8000
+  duration: 10000
 })
 
 // anime({

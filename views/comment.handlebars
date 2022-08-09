@@ -1,0 +1,17 @@
+<header>Pet Portal Comments</header>
+<main>
+<ol>
+    {{#each comment}}
+    <div class="card">
+  <div class="card-header">
+    {{{ comment.title }}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{{ comment.title }}}</h5>
+    <p class="card-text">{{{ comment.comment_text }}} <span>{{{comment.created_at}}}</span></p>
+    <a href="#" class="btn btn-primary">Create new post</a>
+  </div>
+</div>
+{{/each}}
+</ol>
+</main>

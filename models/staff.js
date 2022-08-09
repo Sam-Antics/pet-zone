@@ -33,8 +33,7 @@ Staff.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'staff'
-  }
-);
+});
 
 
 module.exports = Staff;

@@ -30,12 +30,6 @@ Pet.init(
     color: {
       type: DataTypes.STRING,
     },
-    allergies: {
-      type: DataTypes.STRING,
-    },
-    diet: {
-      type: DataTypes.TEXT
-    },
     owner_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -7,11 +7,11 @@ router.get('/', (req, res) => {
     })
 })
 
-<<<<<<< Updated upstream
+
 router.get('/comments', (req, res) => {
     Comment.findAll({
         where: {
-        id: req.params.id
+            id: req.params.id
         },
         attributes: [
             'id',
@@ -20,25 +20,27 @@ router.get('/comments', (req, res) => {
         ],
         include: [
             {
-            model: User,
-            attributes: ['email']
+                model: User,
+                attributes: ['email']
             }
-        
-    ]
-})
-.then(dbCommentData => {
-    if (!dbPostData) {
-        res.status(404).json({ message: "No comments found" });
-        return;
-    }
-    const comment = dbCommentData.get({ plain: true });
-    res.render('comments', { comment });
-})
-.catch(err => {
-    console.log(err);
-    res.status(500).json(err);
+
+        ]
+    })
+        .then(dbCommentData => {
+            if (!dbPostData) {
+                res.status(404).json({ message: "No comments found" });
+                return;
+            }
+            const comment = dbCommentData.get({ plain: true });
+            res.render('comments', { comment });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
-=======
+
+
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/dashboard')
@@ -49,7 +51,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
     res.render('signup');
->>>>>>> Stashed changes
+
 });
 
 module.exports = router;

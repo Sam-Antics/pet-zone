@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Comment } = require('../models');
+const { Comment, User } = require('../models');
 
 router.get('/', (req, res) => {
     res.render('landing', {
@@ -8,15 +8,19 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/comments', (req, res) => {
-    Comment.findAll({
+//comment routes
+router.get('/comments/:id', (req, res) => {
+//    res.render('comments');
+
+    Comment.findOne({
         where: {
         id: req.params.id
         },
         attributes: [
             'id',
-            'comments_text',
-            'created_at'
+            'comment_text',
+            'created_at',
+            'user_id'
         ],
         include: [
             {
@@ -27,7 +31,7 @@ router.get('/comments', (req, res) => {
     ]
 })
 .then(dbCommentData => {
-    if (!dbPostData) {
+    if (!dbCommentData) {
         res.status(404).json({ message: "No comments found" });
         return;
     }

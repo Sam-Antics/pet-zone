@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 //comment routes
 router.get('/comments/:id', (req, res) => {
-//    res.render('comments');
+    //    res.render('comments');
 
     Comment.findOne({
         where: {
@@ -28,13 +28,26 @@ router.get('/comments/:id', (req, res) => {
                 attributes: ['email']
             }
 
-        
-    ]
-})
-.then(dbCommentData => {
-    if (!dbCommentData) {
-        res.status(404).json({ message: "No comments found" });
 
+        ]
+    })
+        .then(dbCommentData => {
+            if (!dbCommentData) {
+                res.status(404).json({ message: "No comments found" });
+                return;
+            }
+            const comment = dbCommentData.get({ plain: true });
+            res.render('comments', { comment });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/dashboard')
         return;
     }
     res.render('login');
@@ -44,5 +57,6 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 
 });
+
 
 module.exports = router;

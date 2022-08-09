@@ -26,13 +26,13 @@ Comment.init(
           key: 'id'
         }
       },
-      pet_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'pet',
-          key: 'id'
-        } 
-      }
+    //   pet_id: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //       model: 'pet',
+    //       key: 'id'
+    //     } 
+    //   }
     },
     {
       sequelize,
@@ -42,4 +42,4 @@ Comment.init(
     }
   );
 
-  module.exports = { Comment };
+  module.exports = Comment;

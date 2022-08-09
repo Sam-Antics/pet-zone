@@ -68,6 +68,21 @@ footer {
 .card-body {
     padding: 2.5%;
 }
+/* 404 page */
+
+.errpage {
+text-align: center;
+}
+
+.troll {
+    width: 50%;
+}
+
+.home {
+    position: absolute;
+    right: 25%;
+    bottom: 60%;
+}
 
 /* button */
 .btn {

@@ -1,3 +1,6 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
 class Owner extends Model {}
 
 Owner.init(
@@ -9,26 +12,14 @@ Owner.init(
       autoIncrement: true,
     },
     user_id: {
-        type: DataType.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
           model: 'user',
           key: 'id'
       } 
     },
-    pet_id: {
-        type: DataType.INTEGER,
-        references: {
-          model: 'pet',
-          key: 'id'
-      }
-      },
-      comment_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'comment',
-          key: 'id'
-      }
-      },
+  },
+      {
         sequelize,
         timestamps: false,
         freezeTableName: true,
@@ -38,4 +29,4 @@ Owner.init(
     );
     
     
-    module.exports = { Owner };
+    module.exports = Owner;

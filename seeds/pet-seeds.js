@@ -7,7 +7,7 @@ const petData = [
         breed: 'Grey Ooze',
         age: '51',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '1'
     },
     {
         name: 'T-Bone',
@@ -15,7 +15,7 @@ const petData = [
         breed: 'Almiraj',
         age: '4',
         color: 'Tan',
-        owner_id: ''
+        owner_id: '1'
     },
     {
         name: 'Candy',
@@ -23,7 +23,7 @@ const petData = [
         breed: 'Dust Mephit',
         age: '54',
         color: 'Tan',
-        owner_id: ''
+        owner_id: '2'
     },
     {
         name: 'Yank',
@@ -31,7 +31,7 @@ const petData = [
         breed: 'Blink Dog',
         age: '5',
         color: 'Tan',
-        owner_id: ''
+        owner_id: '2'
     },
     {
         name: 'Hog',
@@ -39,7 +39,7 @@ const petData = [
         breed: 'Baboon',
         age: '6',
         color: 'Black',
-        owner_id: ''
+        owner_id: '3'
     },
     {
         name: 'Toon',
@@ -47,7 +47,7 @@ const petData = [
         breed: 'Crawling Claw',
         age: '412',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '3'
     },
     {
         name: 'Wiz',
@@ -55,7 +55,7 @@ const petData = [
         breed: 'Dreerie',
         age: '8',
         color: 'Blue',
-        owner_id: ''
+        owner_id: '4'
     },
     {
         name: 'Indie',
@@ -63,7 +63,7 @@ const petData = [
         breed: 'Bulette',
         age: '37',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '5'
     },
     {
         name: 'Daring',
@@ -71,7 +71,7 @@ const petData = [
         breed: 'Dandelion',
         age: '7',
         color: 'Green/Yellow',
-        owner_id: ''
+        owner_id: '5'
     },
     {
         name: 'Storm',
@@ -79,7 +79,7 @@ const petData = [
         breed: 'Phoenix',
         age: '2',
         color: 'Red/Orange',
-        owner_id: ''
+        owner_id: '5'
     },
     {
         name: 'Dawg',
@@ -87,7 +87,7 @@ const petData = [
         breed: 'Kiddywidget',
         age: '9',
         color: 'Yellow',
-        owner_id: ''
+        owner_id: '6'
     },
     {
         name: 'Bunny',
@@ -95,7 +95,7 @@ const petData = [
         breed: 'Boggle',
         age: '264',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '7'
     },
     {
         name: 'Jazzy',
@@ -103,7 +103,7 @@ const petData = [
         breed: 'Brain-in-a-Jar',
         age: '632',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '7'
     },
     {
         name: 'Growl',
@@ -111,7 +111,7 @@ const petData = [
         breed: 'Air Elemental',
         age: '23',
         color: 'Tan',
-        owner_id: ''
+        owner_id: '8'
     },
     {
         name: 'Titch',
@@ -119,7 +119,7 @@ const petData = [
         breed: 'Sorrowfish',
         age: '62',
         color: 'White/Purple',
-        owner_id: ''
+        owner_id: '8'
     },
     {
         name: 'Pipi',
@@ -127,7 +127,7 @@ const petData = [
         breed: 'Flumph',
         age: '3',
         color: 'Green',
-        owner_id: ''
+        owner_id: '8'
     },
     {
         name: 'Sticks',
@@ -135,7 +135,7 @@ const petData = [
         breed: 'Fox',
         age: '4',
         color: 'White',
-        owner_id: ''
+        owner_id: '9'
     },
     {
         name: 'Speed',
@@ -143,7 +143,7 @@ const petData = [
         breed: 'Awakened Shrub',
         age: '923',
         color: 'Orange',
-        owner_id: ''
+        owner_id: '10'
     },
     {
         name: 'Old Buck',
@@ -151,7 +151,7 @@ const petData = [
         breed: 'Gazer',
         age: '163',
         color: 'Green/Yellow',
-        owner_id: ''
+        owner_id: '10'
     },
     {
         name: 'Trey',
@@ -159,7 +159,7 @@ const petData = [
         breed: 'Darkmantle',
         age: '77',
         color: 'Purple',
-        owner_id: ''
+        owner_id: '11'
     },
     {
         name: 'Grim',
@@ -167,7 +167,7 @@ const petData = [
         breed: 'Cat',
         age: '6',
         color: 'Black/White',
-        owner_id: ''
+        owner_id: '11'
     },
     {
         name: 'CooCoo',
@@ -175,7 +175,7 @@ const petData = [
         breed: 'Madcap',
         age: '194720',
         color: 'Red',
-        owner_id: ''
+        owner_id: '12'
     },
     {
         name: 'Fortuna',
@@ -183,7 +183,7 @@ const petData = [
         breed: 'Octopus',
         age: '8',
         color: 'Blue',
-        owner_id: ''
+        owner_id: '13'
     },
     {
         name: 'Cyclops',
@@ -191,15 +191,15 @@ const petData = [
         breed: 'Zorbos',
         age: '6',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '13'
     },
     {
         name: 'Pug',
         type: 'Beast',
         breed: 'Weasel',
-        age: 'Red',
-        color: '3',
-        owner_id: ''
+        age: '3',
+        color: 'red',
+        owner_id: '14'
     },
     {
         name: 'Creep',
@@ -207,7 +207,7 @@ const petData = [
         breed: 'Stirge',
         age: '2',
         color: 'Pink',
-        owner_id: ''
+        owner_id: '19'
     },
     {
         name: 'Rose',
@@ -215,7 +215,7 @@ const petData = [
         breed: 'Geonid',
         age: '14',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '15'
     },
     {
         name: 'Undertaker',
@@ -223,7 +223,7 @@ const petData = [
         breed: 'Owl',
         age: '8',
         color: 'White',
-        owner_id: ''
+        owner_id: '16'
     },
     {
         name: 'Boomer',
@@ -231,7 +231,7 @@ const petData = [
         breed: 'Vargouille',
         age: '17',
         color: 'Brown',
-        owner_id: ''
+        owner_id: '17'
     },
     {
         name: 'Skip',
@@ -239,7 +239,7 @@ const petData = [
         breed: 'Gremishka',
         age: '45',
         color: 'Grey',
-        owner_id: ''
+        owner_id: '18'
     }
 ];
 

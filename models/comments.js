@@ -1,3 +1,6 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
 class Comment extends Model {}
 
 Comment.init(
@@ -15,12 +18,6 @@ Comment.init(
       comment_text: {
         type: DataTypes.STRING,
         allowNull: false,
-      },
-      image_url: {
-        type: DataTypes.STRING,
-        validate: {
-            isPNG: true
-        }
       },
       user_id: {
         type: DataTypes.INTEGER,
@@ -45,4 +42,4 @@ Comment.init(
     }
   );
 
-  module.exports = { Comment };
+  module.exports = Comment;

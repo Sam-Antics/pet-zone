@@ -120,6 +120,22 @@ footer {
     box-shadow: 2px 2px var(--dark);
 }
 
+#home-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#home-card {
+    margin: 25px;
+    padding: 25px;
+}
+
+/* CAROUSEL */
+.carousel-item {
+    width: 200px;
+    height: 200px;
+}
+
 /* FORM */
 .form-label {
     font-size: 1.1rem;

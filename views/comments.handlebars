@@ -1,27 +1,53 @@
-<header>Pet Portal Comments</header>
+
 <main>
-  <form>
-    <div>
-      <div>Enter a comment</div>
-      <textarea name="comment.body"></textarea>
-    </div>
-    <button type="submit">add comment</button>
-    </form>
-  </form>
-
+  <!-- View comments by user -->
     <div class="card">
-
   <div class="card-header">
-    {{ comment.title }}
+    <h3>Pet Portal comment</h3>
   </div>
   <div class="card-body">
     <h5 class="card-title">{{ comment.title }}</h5>
     <p class="card-text">{{ comment.comment_text }} <span>{{comment.created_at}}</span></p>
-    <a href="#" class="btn btn-primary">Create new comment</a>
+    <a href="#" class="btn btn-primary w-25 mb-0">add a reply</a>
   </div>
 </div>
-<section>
-
-</section>
-
+<!-- Enter a new comment -->
+<header>
+  <h4>Create a new comment</h4>
+</header>
+  <form class="comment-form">
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Title</label>
+  <input name="comment-title" type="title" class="form-control" id="exampleFormControlInput1" placeholder="enter title">
+</div>
+    <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+  <textarea name="comment-body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <button type="submit" class="btn btn-primary w-50">add comment</button>
+</div>
+      {{!-- <div>Enter a comment</div>
+      <input type="submit" class="comment-title"></input>
+      <textarea name="comment-body"></textarea>
+    
+    </form> --}}
+  </form>
 </main>
+
+<article>
+
+{{#if comments.length}}
+<section>
+  <h2>Your Comments</h2>
+  <ol>
+    {{#each comments as |comment|}}
+    <li>
+      {{> comment-info comment}}
+      {{!-- <a href="/dashboard/edit/{{comment.id}}" class="edit-link">Edit post</a> --}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+</article>
+<script src="/javascript/comments.js"></script>

@@ -120,10 +120,20 @@ LANDING PAGE
   background: var(--primary);
   display: flex;
   justify-content: center;
+  color: var(--secondaryj);
   align-items: center;
-  color: var(--secondary);
+  text-align: center;
+  font-size: 18px;
+  button-color: var(--secondary);
 }
 
+.swiper-button-prev {
+    color: var(--dark) !important; 
+  }
+  
+  .swiper-button-next {
+    color: var(--dark) !important;
+  }
 
 
 /* CARDS */

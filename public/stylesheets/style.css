@@ -228,12 +228,12 @@ p {
 .square {
     position: relative;
     width: 100px;
-    background-color: red;
     left: 20%;
 }
 
 .trolly {
     width: 100%;
+    transform: rotate(30deg) scaleX(-1);
 }
 
 /* FORM */

@@ -36,9 +36,20 @@ THEN I can see immunization records and any recent medical test results, as well
 
 ## Deployed Website
 Deployed URL: <br/><br/>
-![Deployed website](#)
+[Heroku-deployed Application](https://vet-pet-portal.herokuapp.com/)
 
 ## Built With
+- HTML
+- Bootstrap CSS
+- JavaScript
+- Node.js
+- MySQL
+- Express.js npm package
+- MySQL2 npm package
+- Sequelize npm package
+- dotenv npm package
+- [Swiper](https://swiperjs.com/swiper-api)
+- [AnimeJS](https://animejs.com/)
 
 ## Future Development
 

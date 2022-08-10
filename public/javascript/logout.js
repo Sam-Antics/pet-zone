@@ -11,11 +11,5 @@ async function logout() {
     }
 }
 
-
-function goBack() {
-    console.log('click')
-    document.location.replace('/')
-}
-
-document.querySelector('.back').addEventListener('click', goBack);
 document.querySelector('#logout').addEventListener('click', logout);
+

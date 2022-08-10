@@ -20,6 +20,10 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+router.get("/staffportal", (req,res) => {
+  res.render("staff");
+})
+
 //comment routes
 router.get("/comments/:id", (req, res) => {
   //    res.render('comments');

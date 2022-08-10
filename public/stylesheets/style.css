@@ -21,10 +21,10 @@ body {
     font-size: 14px;
 }
 
-main {
+/* main {
     margin: 5% auto;
     width: 94%;
-}
+} */
 
 header {
     /* background-image: linear-gradient(to bottom, #7b2cbf, #f5f6e0); */
@@ -50,11 +50,14 @@ h1 {
 
 h3 {
     font-size: 2.0rem;
+    font-weight: bolder;
+    color: var(--secondary);
 }
 
 h6 {
    font-size: 1.25rem;
    font-weight: bolder;
+   color: var(--dark);
 }
 
 a {
@@ -81,7 +84,7 @@ p {
     display: flex;
     margin: 25px 150px 25px 0px;
     padding: 0px 50px 0px 0px;
-    background-color: #f5f6e0;
+    background-color: var(--light-dark);
     border-radius: var(--border-radius);
 }
 
@@ -95,15 +98,43 @@ p {
     align-items: center;
     margin: 25px 50px;
     padding: 30px 50px 30px 10px;
-    background-color: #f5f6e0;
+    background-color: var(--light-dark);
     border-radius: var(--border-radius);
 }
 
 /* LANDING PAGE */
-.landing-page-center-image {
+.landing-div {
     display: flex;
     align-items: center;
+    text-align: center;
+    color: var(--light-dark);
 }
+
+/* SWIPER PHOTO GALLERY */
+.swiper {
+  height: 200px;
+  width: 400px;
+}
+
+.swiper-slide {
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  color: var(--secondaryj);
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  button-color: var(--secondary);
+}
+
+.swiper-button-prev {
+    color: var(--dark) !important; 
+  }
+  
+  .swiper-button-next {
+    color: var(--dark) !important;
+  }
+
 
 /* CARDS */
 .card {
@@ -228,12 +259,12 @@ p {
 .square {
     position: relative;
     width: 100px;
-    background-color: red;
     left: 20%;
 }
 
 .trolly {
     width: 100%;
+    transform: rotate(30deg) scaleX(-1);
 }
 
 /* FORM */

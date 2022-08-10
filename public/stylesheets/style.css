@@ -102,8 +102,8 @@ p {
     border-radius: var(--border-radius);
 }
 
-LANDING PAGE
-.landing-page-center-image {
+/* LANDING PAGE */
+.landing-div {
     display: flex;
     align-items: center;
     text-align: center;

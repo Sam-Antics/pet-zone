@@ -9,15 +9,19 @@ router.get('/', (req, res) => {
 })
 
 
-router.get('/comments', (req, res) => {
-    Comment.findAll({
+//comment routes
+router.get('/comments/:id', (req, res) => {
+    //    res.render('comments');
+
+    Comment.findOne({
         where: {
             id: req.params.id
         },
         attributes: [
             'id',
-            'comments_text',
-            'created_at'
+            'comment_text',
+            'created_at',
+            'user_id'
         ],
         include: [
             {
@@ -25,10 +29,11 @@ router.get('/comments', (req, res) => {
                 attributes: ['email']
             }
 
+
         ]
     })
         .then(dbCommentData => {
-            if (!dbPostData) {
+            if (!dbCommentData) {
                 res.status(404).json({ message: "No comments found" });
                 return;
             }
@@ -40,7 +45,6 @@ router.get('/comments', (req, res) => {
             res.status(500).json(err);
         });
 });
-
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
@@ -54,5 +58,6 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 
 });
+
 
 module.exports = router;

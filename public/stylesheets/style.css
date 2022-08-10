@@ -1,10 +1,10 @@
 :root {
-    --primary: #b0d7bd;
-    --secondary: #9caea9;
-    --tertiary: #788585;
-    --light-dark: #6f6866;
-    --dark: #38302e;
-    --border-radius: .5rem;
+    --primary: #7b2cbf;
+    --secondary: #E97319;
+    --tertiary: #962217;
+    --light-dark: #f5f6e0;
+    --dark: #150721;
+    --border-radius: 10px;
 }
 
 * {
@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: #c37857;
+    background-color: var(--primary);
     margin: 0;
     padding: 0;
     font-family: "IBM Plex Sans", sans-serif;
@@ -27,7 +27,8 @@ main {
 }
 
 header {
-    background-color: #99b27f;
+    /* background-image: linear-gradient(to bottom, #7b2cbf, #f5f6e0); */
+    background-color: rgba(21, 7, 33, 0) ;
     text-align: center;
     font-size: 26px;
 }
@@ -39,6 +40,64 @@ footer {
     align-items: baseline;
     padding: 1%;
     font-size: 110%;
+    color: var(--dark);
+    background: var(--light-dark);
+}
+
+h1 {
+    color: #150721;
+}
+
+h3 {
+    font-size: 2.0rem;
+}
+
+a {
+    margin: 10px;
+    color: #150721;
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+p {
+    margin: 3rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    margin: 35px 155px;
+}
+
+.app-title {
+    display: flex;
+    margin: 25px 150px 25px 0px;
+    padding: 0px 50px 0px 0px;
+    background-color: #f5f6e0;
+    border-radius: var(--border-radius);
+}
+
+.header-image,
+#header-image {
+    width: 50%;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    margin: 25px 50px;
+    padding: 30px 50px 30px 10px;
+    background-color: #f5f6e0;
+    border-radius: var(--border-radius);
+}
+
+/* LANDING PAGE */
+.landing-page-center-image {
+    display: flex;
+    align-items: center;
 }
 
 /* CARDS */
@@ -59,19 +118,28 @@ footer {
 }
 
 .card-header {
-    color: var(--primary);
-    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    color: var(--light-dark);
+    background-color: var(--tertiary);
+    /* background-image: linear-gradient(to bottom, var(--secondary), var(--light-dark) ); */
     padding: 2.5%;
-    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    border-radius: var(--border-radius);
 }
 
 .card-body {
     padding: 2.5%;
 }
+
+#home-card {
+    border-radius: var(--border-radius);
+    background-color: var(--light-dark);
+}
+
 /* 404 page */
 
 .errpage {
-text-align: center;
+    text-align: center;
 }
 
 .troll {
@@ -142,7 +210,7 @@ text-align: center;
 
 #home-card {
     margin: 25px;
-    padding: 25px;
+    padding: 0px 0px 20px;
 }
 
 /* CAROUSEL */
@@ -152,7 +220,7 @@ text-align: center;
 }
 
 /* animations */
-.square{
+.square {
     position: relative;
     width: 100px;
     background-color: red;

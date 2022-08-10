@@ -1,7 +1,7 @@
 class Boarding extends Model {}
 
 Boarding.init(
-  {
+{
     boarding_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -27,8 +27,8 @@ Boarding.init(
             key: 'id'
         }
     }//join to pets many to many
-  },
-  {
+},
+{
     sequelize,
     timestamps: false,
     freezeTableName: true,

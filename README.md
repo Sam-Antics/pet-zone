@@ -29,7 +29,7 @@ WHEN logging into the client side of the application,
 THEN I can see cards with pictures of each of the animals who are patients at the clinic.
 WHEN select on of my animals
 THEN I can see immunization records and any recent medical test results, as well as receivin interaction with the vet and/or staff.
-
+WHEN THE pic is broke, we fix
 
 
 ```

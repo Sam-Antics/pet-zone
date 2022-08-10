@@ -1,5 +1,18 @@
-const router = require("../../controllers/home-routes");
+async function commentFormHandler(event) {
+  event.preventDefault();
 
+  const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
+
+  const comment_id = window.location.toString().split('/')[
+    window.location.toString().split('/').length -1
+  ];
+  console.log(comment_text, comment_id);
+  }
+
+  document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+
+
+  
      
 // router.get('/comments', (req, res) => {
 //     const comment = {

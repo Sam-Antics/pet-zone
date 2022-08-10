@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Staff } = require('../../models');
 
+
 //gets all staff
 router.get("/", (req, res) => {
     Staff.findAll({
@@ -64,6 +65,34 @@ router.put('/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+//login route for a staff
+router.post('/login', (req, res) => {
+    // expects { "email": "voldemort@gmail.com", "password": "password1234"}
+    Staff.findOne({
+        where: {
+            email: req.body.email
+        }
+    })
+        .then(dbUserData => {
+            if (!dbUserData) {
+                res.status(404).json({ message: 'No user with that email address!' });
+                return;
+            }
+            const validPassword = dbUserData.checkPassword(req.body.password);
+            if (!validPassword) {
+                res.status(404).json({ message: 'Incorrect password!' });
+                return;
+            }
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.email = dbUserData.email;
+                req.session.loggedIn = true;
+
+                res.json({ user: dbUserData, message: 'You are now logged in!' });
+            });
+        });
 });
 
 // delete a staff member from the database

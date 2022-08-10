@@ -18,7 +18,7 @@ body {
     font-family: "IBM Plex Sans", sans-serif;
     color: var(--dark);
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 main {
@@ -50,6 +50,11 @@ h1 {
 
 h3 {
     font-size: 2.0rem;
+}
+
+h6 {
+   font-size: 1.25rem;
+   font-weight: bolder;
 }
 
 a {

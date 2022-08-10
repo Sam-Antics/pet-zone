@@ -4,6 +4,7 @@ const { Comment, User } = require('../models');
 
 router.get('/', (req, res) => {
     res.render('landing', {
+        loggedIn: req.session.loggedIn
     })
 })
 

@@ -248,6 +248,11 @@ figure figcaption {
     display: inline;
 }
 
+.stafflogout {
+    text-align: center;
+    font-weight: bolder;
+}
+
 .btn-back {
     border-radius: var(--border-radius);
     color: var(--primary);

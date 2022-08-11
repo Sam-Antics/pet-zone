@@ -1,5 +1,7 @@
+//removes PetPortal for StaffPortal in the nav
 document.getElementById("nav-title").innerHTML = "StaffPortal";
 
+//allows staff to login by taking in the info. from the from and sending to /api/staff/login
 async function loginFormHandler(event) {
     event.preventDefault();
     console.log('click')
@@ -18,7 +20,7 @@ async function loginFormHandler(event) {
         });
         
         if (response.ok) {
-            document.location.replace('/dashboard/');
+            document.location.replace('/staffdashboard/');
             console.log('you are now logged in');
         } else {
             alert(response.statusText);

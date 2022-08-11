@@ -5,6 +5,10 @@ const { findAll } = require("../../models/users");
 router.get("/", (req, res) => {
   Comment.findAll({
     attributes: ["id", "title", "comment_text"],
+    where: {
+      model: User,
+      attribute: 'username'
+    }
   })
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
@@ -45,14 +49,14 @@ router.get("/", (req, res) => {
     include: [
       {
         model: User,
-        attributes: ["email"],
+        attributes: ["username"],
       },
     ],
   })
     .then((dbCommentData) => {
       // serialize data before passing to template
-      const posts = dbCommentData.map((post) => comment.get({ plain: true }));
-      res.render("comments", { comment, loggedIn: true });
+      const comment = dbCommentData.map((comment) => comment.get({ plain: true }));
+      res.render("comment", { comment, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);

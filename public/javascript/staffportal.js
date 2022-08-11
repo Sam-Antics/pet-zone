@@ -1,3 +1,4 @@
+// STAFF BUTTONS
 function addStaffBtnHandler(event) {
   event.preventDefault();
 
@@ -12,10 +13,10 @@ function addStaffBtnHandler(event) {
   }
 }
 
-function addOwnerBtnHandler(event) {
+function viewStaffBtnHandler(event) {
   event.preventDefault();
 
-  const form = document.querySelector('#add-owner-form');
+  const form = document.querySelector('#view-staff-form');
 
   if (form.style.display === 'none') {
     // shows the form on button click
@@ -26,10 +27,11 @@ function addOwnerBtnHandler(event) {
   }
 }
 
-function addPetBtnHandler(event) {
+// OWNER BUTTONS
+function addOwnerBtnHandler(event) {
   event.preventDefault();
 
-  const form = document.querySelector('#add-pet-form');
+  const form = document.querySelector('#add-owner-form');
 
   if (form.style.display === 'none') {
     // shows the form on button click
@@ -56,6 +58,21 @@ function viewOwnerBtnHandler(event) {
 
 }
 
+// PET BUTTONS
+function addPetBtnHandler(event) {
+  event.preventDefault();
+
+  const form = document.querySelector('.add-pet-form');
+
+  if (form.style.display === 'none') {
+    // shows the form on button click
+    form.style.display = 'block';
+  } else {
+    // hides form if showing
+    form.style.display = 'none';
+  }
+}
+
 function viewPetBtnHandler(event) {
   event.preventDefault();
 
@@ -71,6 +88,7 @@ function viewPetBtnHandler(event) {
   }
 }
 
+// APPOINTMENT BUTTON
 function setApptBtnHandler(event) {
   event.preventDefault();
 
@@ -86,6 +104,7 @@ function setApptBtnHandler(event) {
   }
 }
 
+
 async function staffLogout() {
   const response = await fetch('/api/staff/logout', {
     method: 'post',
@@ -99,10 +118,22 @@ async function staffLogout() {
   }
 }
 
+// Staff listeners
+
 document.querySelector('#add-staff').addEventListener('click', addStaffBtnHandler);
+document.querySelector('#view-staff').addEventListener('click', viewStaffBtnHandler);
+
+// Owner listeners
 document.querySelector('#add-owner').addEventListener('click', addOwnerBtnHandler);
-document.querySelector('#add-pet').addEventListener('click', addPetBtnHandler);
 document.querySelector('#view-owner').addEventListener('click', viewOwnerBtnHandler);
+
+// Pet listeners
+document.querySelector('#add-pet').addEventListener('click', addPetBtnHandler);
 document.querySelector('#view-pet').addEventListener('click', viewPetBtnHandler);
+
+// Appointment Listener
 document.querySelector('#add-appt').addEventListener('click', setApptBtnHandler);
+
+// Staff Logout
 document.querySelector('#stafflogout').addEventListener('click', staffLogout);
+

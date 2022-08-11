@@ -4,30 +4,68 @@
       <h2 class="subtitle">What Would You Like To Do?<span id="repo-search-term"></span></h2>
       <h3 class="card-header text-uppercase">Options</h3>
       <div class="card-body" id="language-buttons">
+
+        {{!-- Staff buttons --}}
         <button class="btn add-staff" id="add-staff">Add a Staff Member</button>
         <form id="add-staff-form">
           <input type="text" placeholder="Staff Name" />
         </form>
+
+        <button class="btn view-staff" id="view-staff">View a Staff Member Profile</button>
+        <form id="view-staff-form">
+          <input type="text" placeholder="Staff Name" />
+        </form>
+
+        {{!-- Owner Buttons --}}
         <button class="btn add-owner" id="add-owner">Add an Owner</button>
         <form id="add-owner-form">
           <input type="text" placeholder="Owner Name" />
-        </form>
-        <button class="btn add-pet" id="add-pet">Add a Pet</button>
-        <form id="add-pet-form">
-          <input type="text" placeholder="Pet Name" />
+
         </form>
         <button class="btn view-owner" id="view-owner">View an Owner Profile</button>
         <form id="vw-owner-form">
           <input type="text" placeholder="First Name" />
         </form>
+
+        {{!-- Pet Buttons --}}
+        <button class="btn add-pet" id="add-pet">Add a Pet</button>
+      <div class="add-pet-form form-input" >
+          <div>
+            <input name="pet-name" class="form-label" placeholder="Pet Name" type="text" />
+          </div>
+          <div>
+            <input name="pet-type"class="form-label" placeholder="Pet Type" type="text" />
+          </div>
+          <div>
+            <input name="pet-breed" class="form-label" placeholder="Pet Breed" type="text" />
+          </div>
+          <div>
+            <input name="pet-age" class="form-label" placeholder="Pet Age" type="number" />
+          </div>
+          <div>
+            <input name="pet-color" class="form-label" placeholder="Color" type="text" />
+          </div>
+          <div>
+            <input name="pet-owner" class="form-label" placeholder="Owner ID" type="number" />
+          </div>
+          <div>
+            <button id="pet-submit" class="btn submit-btn" type="submit">submit pet!</button>
+          </div>
+      </div>
+
         <button class="btn view-pet" id="view-pet">View a Pet</button>
         <form id="vw-pet-form">
-          <input type="text" placeholder="Pet's Name" />
+          <input class="form-label" type="text" placeholder="Pet Name" id="get-pet-name"/>
         </form>
+
+        {{!-- Appt Button --}}
+
         <button class="btn set-appt" id="add-appt">Set an Appointment</button>
         <form id="add-appt-form">
           <input type="text" placeholder="Appointment Date" />
         </form>
+
+
       </div>
     </div>
   </div>
@@ -41,11 +79,5 @@
 
 <script src="/javascript/staffintro.js"></script>
 <script src="/javascript/staffportal.js"></script>
+<script src="/javascript/staffportalsubmit.js"></script>
 
-
-{{!-- <div class="card col-sm-6 mx-auto" id="view-owner-pop-up">
-  <div class="pop-up-content">
-    <p>{{first_name}} {{last_name}}'s Profile</p>
-    <p>{{email}}</p>
-  </div>
-</div> --}}

@@ -3,6 +3,7 @@
     <div class="col-12 col-md-4">
       <div class="card your-pets">
         <h3 class="card-header text-uppercase">Your Pets</h3>
+        <img class="m-auto" src="/images/gray-ooze2.png" alt="square cube of ooze" width="250" height="180">
       </div>
 
       <div class="card">
@@ -18,18 +19,32 @@
     <div class="col-12 col-md-6">
       <div class="card pet-info">
         <h2 class="subtitle">Your Pet Info <span id="repo-search-term"></span></h2>
-        <div id="repos-container" class="list-group"></div>
+        <div id="repos-container" class="list-group">
+            <div class="card-body">
+            <ul>
+              <h4>
+        <li>Name:  Bing</li>
+        <li>Type:  Ooze</li>
+        <li>Breed:  Grey Ooze</li>
+        <li>Age:  51</li>
+        <li>Color:  Grey</li>
+        <li>Diet:  Everything that it is placed upon, favorites include non-magical metal  </li>
+        <li>Note:  watch your fingers and toes!</li>
+        </h4>
+            </ul>
+          </div> 
+        </div>
       </div>
     </div>
   </div>
 </div>
-    <div class="col-md-2"></div>
+    <!-- <div class="col-md-2"></div>
     <div class="col-12 col-md-6">
       <div class="card pet-info">
         <h2 class="subtitle">Your Pet Info <span id="repo-search-term"></span></h2>
         <div id="repos-container" class="list-group"></div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -37,14 +52,14 @@
 <main>
   <!-- View comments by user -->
   <!-- this link to the partial -->
-  <div class="card">
+  <div class="card w-75 m-auto">
     <div class="card-header">
-      <h3>PetPortal Comment</h3>
+      <h3>My PetPortal Comments</h3>
     </div>
      <article>
     {{#if comments.length}}
     <section>
-      <h2>Your Comments</h2>
+      <h4>Recent Comments</h4>
       <ol>
         {{#each comments as |comment|}}
         <li>
@@ -60,24 +75,20 @@
   </div>
   <!-- Enter a new comment -->
   <header>
-    <h4>Create a New Comment</h4>
+    <h4 class="w-75 m-auto p-3">Create a New Comment</h4>
   </header>
-  <form class="comment-form">
+  <form class="comment-form m-auto w-75">
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <!-- <label for="exampleFormControlInput1" class="form-label">Title</label> -->
       <input name="comment-title" type="title" class="form-control" id="exampleFormControlInput1"
-        placeholder="enter title">
+        placeholder="Enter a title">
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
-      <textarea name="comment-body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <!-- <label for="exampleFormControlTextarea1" class="form-label">Comment</label> -->
+      <textarea name="comment-body" class="form-control" id="exampleFormControlTextarea1" placeholder="Enter comment" rows="3"></textarea>
       <button type="submit" class="btn btn-primary w-50">add comment</button>
     </div>
-    {{!-- <div>Enter a comment</div>
-    <input type="submit" class="comment-title"></input>
-    <textarea name="comment-body"></textarea>
-
-  </form> --}}
+    
   </form>
 </main>
 

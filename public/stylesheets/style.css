@@ -104,20 +104,31 @@ p {
     align-items: center;
 }
 
+figure figcaption {
+  border: 1px dotted var(--dark);
+  text-align: center;
+  font-weight: bold;
+}
+
 /* SWIPER PHOTO GALLERY */
 .swiper {
   height: 200px;
   width: 400px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--light-dark);
+  font-size: 1.5em;
 }
 
 .swiper-slide {
   background: var(--primary);
   display: flex;
   justify-content: center;
-  color: var(--secondaryj);
+  color: var(--dark);
   align-items: center;
   text-align: center;
   font-size: 18px;
+
 }
 
 .swiper-button-prev {

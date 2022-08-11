@@ -1,4 +1,4 @@
-// Staff Buttons
+// STAFF BUTTONS
 function addStaffBtnHandler(event) {
   event.preventDefault();
 
@@ -27,7 +27,7 @@ function viewStaffBtnHandler(event) {
   }
 }
 
-// Owner Buttons
+// OWNER BUTTONS
 function addOwnerBtnHandler(event) {
   event.preventDefault();
 
@@ -58,11 +58,11 @@ function viewOwnerBtnHandler(event) {
 
 }
 
-// Pet Buttons
+// PET BUTTONS
 function addPetBtnHandler(event) {
   event.preventDefault();
 
-  const form = document.querySelector('#add-pet-form');
+  const form = document.querySelector('.add-pet-form');
 
   if (form.style.display === 'none') {
     // shows the form on button click
@@ -88,7 +88,7 @@ function viewPetBtnHandler(event) {
   }
 }
 
-// Appointment Button
+// APPOINTMENT BUTTON
 function setApptBtnHandler(event) {
   event.preventDefault();
 
@@ -104,13 +104,18 @@ function setApptBtnHandler(event) {
   }
 }
 
+
+// Staff listeners
 document.querySelector('#add-staff').addEventListener('click', addStaffBtnHandler);
 document.querySelector('#view-staff').addEventListener('click', viewStaffBtnHandler);
 
+// Owner listeners
 document.querySelector('#add-owner').addEventListener('click', addOwnerBtnHandler);
 document.querySelector('#view-owner').addEventListener('click', viewOwnerBtnHandler);
 
+// Pet listeners
 document.querySelector('#add-pet').addEventListener('click', addPetBtnHandler);
 document.querySelector('#view-pet').addEventListener('click', viewPetBtnHandler);
 
+// Appointment listener
 document.querySelector('#add-appt').addEventListener('click', setApptBtnHandler);

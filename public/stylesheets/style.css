@@ -29,6 +29,11 @@ header {
     font-size: 26px;
 }
 
+#header-image {
+    display: flex;
+    align-items: center;
+}
+
 footer {
     border-top: 1px solid #ccc;
     display: flex;
@@ -287,10 +292,16 @@ figure figcaption {
     width: 100%;
     line-height: 2.5;
 }
-
+.form-div {
+    margin-bottom: 45px;
+}
 .form-div h1 {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
     margin: 0;
-    background-color: darkcyan;
+    background-color: var(--tertiary);
+    color: var(--light-dark);
     height: 20%;
 }
 
@@ -388,6 +399,7 @@ figure figcaption {
 }
 
 @media screen and (max-width: 500px) {
+    /* landing page */
     .container {
         max-width: 375px;
     }
@@ -410,5 +422,27 @@ figure figcaption {
         flex-direction: column;
         align-items: center;
 
+    }
+    /* client dashboard */
+    .your-pets {
+        width: 45%;
+    }
+
+    #options {
+        width: 45%;
+    }
+
+    .pet-info {
+        width: 45%;
+    }
+
+    #comment-btn {
+        margin-left: 60px;
+    }
+
+    /* staff dashboard */
+    #staff-portal {
+        display: flex;
+        width: 75%;
     }
 }

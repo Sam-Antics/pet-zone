@@ -21,19 +21,19 @@ router.get("/signup", (req, res) => {
 });
 
 //renders staff page
-router.get("/staffportal", (req, res) => {
+router.get("/stafflogin", (req, res) => {
   if (req.session.staffLoggedIn) {
-    res.redirect("staffdashboard")
+    res.redirect("staffportal")
   }
-  res.render("staff");
+  res.render("stafflogin");
 })
 
 //render and redirects to staff dashboard but need to fix issue being able to route to staffdashboard with a button
-router.get("/staffdashboard", (req, res) => {
+router.get("/staffportal", (req, res) => {
   if (!req.session.staffLoggedIn) {
-    res.redirect('/staffportal')
+    res.redirect('/stafflogin')
   }
-  res.render("staffdashboard")
+  res.render("staffportal")
 })
 
 //comment routes -- not sure what this one does.. was able to comment this one out and the one in the dashboard routes is the one that allows rendering.
@@ -64,6 +64,5 @@ router.get("/staffdashboard", (req, res) => {
 //       res.status(500).json(err);
 //     });
 // });
-
 
 module.exports = router;

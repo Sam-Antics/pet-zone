@@ -20,7 +20,7 @@ async function loginFormHandler(event) {
         });
         
         if (response.ok) {
-            document.location.replace('/staffdashboard/');
+            document.location.replace('/staffportal/');
             console.log('you are now logged in');
         } else {
             alert(response.statusText);

@@ -42,7 +42,10 @@ router.post('/', (req, res) => {
     // expects { "title": "title"}
     Staff.create({
         title: req.body.title,
-        // need help to figure how to link the UserId
+        salary: req.body.salary,
+        staff_email: req.body.staff_email,
+        password: req.body.password,
+        user_id: req.body.user_id
     })
     .then(dbStaffData => res.json(dbStaffData))
     .catch(err => {
@@ -92,6 +95,18 @@ router.post('/login', (req, res) => {
                 res.json({ user: dbStaffData, message: 'You are now logged in!' });
             });
         });
+});
+
+//logout route for a staff member
+router.post('/logout', (req, res) => {
+    if (req.session.staffLoggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
 });
 
 // delete a staff member from the database

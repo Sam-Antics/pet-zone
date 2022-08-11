@@ -93,8 +93,13 @@ function addPetFormhandler(event) {
   event.preventDefault();
 
   const petName = document.querySelector('#pet-name-input').value.trim();
+  const petType = document.querySelector('#pet-type-input').value.trim();
+  const petBreed = document.querySelector('#pet-breed-input').value.trim();
+  const petAge = document.querySelector('#pet-age-input').value.trim();
+  const petColor = document.querySelector('#pet-color-input').value.trim();
+  const petOwner = document.querySelector('#pet-owner-input').value.trim();
 
-  if (petName) {
+  if (petName && petType && petBreed && petAge && petColor && petOwner) {
     console.log('You got it!');
   }
 }

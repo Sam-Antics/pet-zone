@@ -92,7 +92,7 @@ function viewPetBtnHandler(event) {
 function addPetFormhandler(event) {
   event.preventDefault();
 
-  const petName = document.querySelector('#pet-input').value.trim();
+  const petName = document.querySelector('#pet-name-input').value.trim();
 
   if (petName) {
     console.log('You got it!');
@@ -122,7 +122,7 @@ document.querySelector('#add-owner').addEventListener('click', addOwnerBtnHandle
 document.querySelector('#view-owner').addEventListener('click', viewOwnerBtnHandler);
 
 document.querySelector('#add-pet').addEventListener('click', addPetBtnHandler);
-document.querySelector('#add-pet-form').addEventListener('submit', AddPetFormHandler);
+document.querySelector('#add-pet-form').addEventListener('submit', addPetFormhandler);
 document.querySelector('#view-pet').addEventListener('click', viewPetBtnHandler);
 
 document.querySelector('#add-appt').addEventListener('click', setApptBtnHandler);

@@ -176,6 +176,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 /* 404 page */
@@ -298,6 +299,30 @@ p {
 .form-div {
     display: flex;
     justify-content: center;
+}
+
+#add-staff-form {
+    display: none;
+}
+
+#add-owner-form {
+    display: none;
+}
+
+#add-pet-form {
+    display: none;
+}
+
+#vw-owner-form {
+  display: none;
+}
+
+#vw-pet-form {
+    display: none;
+}
+
+#add-appt-form {
+    display: none;
 }
 
 .subtitle {

@@ -1,24 +1,94 @@
-<div class="container">
-  <div class="row">
-           <div class="card col-sm-6 mx-auto">
-              <h2 class="subtitle">What Would You Like To Do?<span id="repo-search-term"></span></h2>
-                <h3 class="card-header text-uppercase">Options</h3>
-                  <div class="card-body" id="language-buttons">
-                    <button class="btn add-staff" data-language="javascript">Add a Staff Member</button>
-                    <button class="btn add-owner" data-language="javascript">Add an Owner</button>
-                    <button class="btn add-pet" data-language="javascript">Add a Pet</button>
-                    <button class="btn view-owner" data-language="javascript">View an Owner Profile</button>
-                    <button class="btn view-pet" data-language="html">View a Pet</button>
-                    <button class="btn set-appt" data-language="css">Set an Appointment</button>
-                  </div>
-           </div>
-    </div>
-</div>
+function addStaffBtnHandler(event) {
+  event.preventDefault();
+
+  const form = document.querySelector('#add-staff-form');
+
+  if (form.style.display === 'none') {
+    // shows the form on button click
+    form.style.display = 'block';
+  } else {
+    // hides form if showing
+    form.style.display = 'none';
+  }
+}
+
+function addOwnerBtnHandler(event) {
+  event.preventDefault();
+
+  const form = document.querySelector('#add-owner-form');
+
+  if (form.style.display === 'none') {
+    // shows the form on button click
+    form.style.display = 'block';
+  } else {
+    // hides form if showing
+    form.style.display = 'none';
+  }
+}
+
+function addPetBtnHandler(event) {
+  event.preventDefault();
+
+  const form = document.querySelector('#add-pet-form');
+
+  if (form.style.display === 'none') {
+    // shows the form on button click
+    form.style.display = 'block';
+  } else {
+    // hides form if showing
+    form.style.display = 'none';
+  }
+}
+
+function viewOwnerBtnHandler(event) {
+  event.preventDefault();
+
+  const form = document.querySelector('#vw-owner-form');
+
+  if (form.style.display === 'none') {
+    // shows the form on button click
+    form.style.display = 'block';
+  } else {
+    // hides form if showing
+    form.style.display = 'none';
+  }
 
 
-<script src="/javascript/staffportal.js"></script>
+}
+
+function viewPetBtnHandler(event) {
+  event.preventDefault();
 
 
-            {{!-- <div id="repos-container" class="list-group"></div>
-      <div class="col-md-2"></div>
-            </div> --}}
+  const form = document.querySelector('#vw-pet-form');
+
+  if (form.style.display === 'none') {
+    // shows the form on button click
+    form.style.display = 'block';
+  } else {
+    // hides form if showing
+    form.style.display = 'none';
+  }
+}
+
+function setApptBtnHandler(event) {
+  event.preventDefault();
+
+
+  const form = document.querySelector('#add-appt-form');
+
+  if (form.style.display === 'none') {
+    // shows the form on button click
+    form.style.display = 'block';
+  } else {
+    // hides form if showing
+    form.style.display = 'none';
+  }
+}
+
+document.querySelector('#add-staff').addEventListener('click', addStaffBtnHandler);
+document.querySelector('#add-owner').addEventListener('click', addOwnerBtnHandler);
+document.querySelector('#add-pet').addEventListener('click', addPetBtnHandler);
+document.querySelector('#view-owner').addEventListener('click', viewOwnerBtnHandler);
+document.querySelector('#view-pet').addEventListener('click', viewPetBtnHandler);
+document.querySelector('#add-appt').addEventListener('click', setApptBtnHandler);

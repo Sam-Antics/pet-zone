@@ -21,7 +21,7 @@ router.get("/signup", (req, res) => {
 });
 
 router.get("/staffportal", (req,res) => {
-  res.render("staff");
+  res.render("staffportal");
 })
 
 //comment routes

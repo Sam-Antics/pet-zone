@@ -106,8 +106,6 @@ p {
 .landing-div {
     display: flex;
     align-items: center;
-    text-align: center;
-    color: var(--light-dark);
 }
 
 /* SWIPER PHOTO GALLERY */
@@ -124,7 +122,6 @@ p {
   align-items: center;
   text-align: center;
   font-size: 18px;
-  button-color: var(--secondary);
 }
 
 .swiper-button-prev {
@@ -197,19 +194,19 @@ p {
     display: block;
     margin: 5px 0;
     border-radius: var(--border-radius);
-    color: var(--primary);
+    color: var(--dark);
     border: none;
     outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--dark);
+    background-color: var(--secondary);
+    box-shadow: 3px 3px var(--tertiary);
     transform: translate(-1px, -1px);
 }
 
 .btn:hover {
-    color: var(--primary);
-    background-color: var(--tertiary);
+    color: var(--dark);
+    background-color: var(--primary);
     transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+    box-shadow: 2px 2px var(--light-dark);
 }
 
 .btn-inline {
@@ -247,12 +244,6 @@ p {
 #home-card {
     margin: 25px;
     padding: 0px 0px 20px;
-}
-
-/* CAROUSEL */
-.carousel-item {
-    width: 200px;
-    height: 200px;
 }
 
 /* animations */

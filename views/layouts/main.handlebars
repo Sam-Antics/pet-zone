@@ -46,6 +46,11 @@
   <footer>
     Made with ❤️ by dreamTeam Development
   </footer>
+  {{#if staffLoggedIn}}
+  <div style="text-align: center;">
+  <a href="/stafflogout">logout</a>
+  </div>
+  {{/if}}
 
 
   <script src="/javascript/logout.js"></script>

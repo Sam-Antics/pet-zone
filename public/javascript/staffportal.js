@@ -86,9 +86,23 @@ function setApptBtnHandler(event) {
   }
 }
 
+async function staffLogout() {
+  const response = await fetch('/api/staff/logout', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json'}
+  })
+  if (response.ok){
+    document.location.replace('/');
+  }
+  else {
+    alert(response.statusText);
+  }
+}
+
 document.querySelector('#add-staff').addEventListener('click', addStaffBtnHandler);
 document.querySelector('#add-owner').addEventListener('click', addOwnerBtnHandler);
 document.querySelector('#add-pet').addEventListener('click', addPetBtnHandler);
 document.querySelector('#view-owner').addEventListener('click', viewOwnerBtnHandler);
 document.querySelector('#view-pet').addEventListener('click', viewPetBtnHandler);
 document.querySelector('#add-appt').addEventListener('click', setApptBtnHandler);
+document.querySelector('#stafflogout').addEventListener('click', staffLogout);

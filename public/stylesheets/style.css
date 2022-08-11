@@ -29,6 +29,10 @@ header {
     font-size: 26px;
 }
 
+title {
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
 ul li {
     list-style-type: none;
     text-align: left;
@@ -84,6 +88,8 @@ p {
 }
 
 .app-title {
+    font-family: Copperplate, Papyrus, fantasy;
+    color: --dark;
     display: flex;
     margin: 25px 150px 25px 0px;
     padding: 0px 50px 0px 0px;

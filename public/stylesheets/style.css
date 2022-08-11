@@ -103,14 +103,14 @@ p {
     display: flex;
     align-items: center;
 }
-
+/* Photo Captions */
 figure figcaption {
   border: 1px dotted var(--dark);
   text-align: center;
   font-weight: bold;
 }
 
-/* SWIPER PHOTO GALLERY */
+/* SWIPER Photo Gallery Styles */
 .swiper {
   height: 200px;
   width: 400px;
@@ -135,9 +135,9 @@ figure figcaption {
     color: var(--dark) !important; 
   }
   
-  .swiper-button-next {
-    color: var(--dark) !important;
-  }
+.swiper-button-next {
+color: var(--dark) !important;
+}
 
 
 /* CARDS */
@@ -314,6 +314,10 @@ figure figcaption {
 }
 
 #add-staff-form {
+    display: none;
+}
+
+#view-staff-form {
     display: none;
 }
 

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Comment, User, Pet } = require("../../models");
-const { findAll } = require("../../models/users");
 
+//gets all the comments
 router.get("/", (req, res) => {
   Comment.findAll({
     attributes: ["id", "title", "comment_text"],
@@ -33,6 +33,8 @@ router.post("/", (req, res) => {
 
 });
 
+
+// possible duplicate will have to take a look later on today
 router.get("/", (req, res) => {
   Comment.findAll({
     where: {

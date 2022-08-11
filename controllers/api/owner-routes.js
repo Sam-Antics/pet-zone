@@ -8,12 +8,12 @@ router.get('/', (req, res) => {
          'id',
          'user_id' 
         ],
-        // include: [
-        //     {
-        //         model: Pet,
-        //         attributes: ['id', 'name']
-        //     }
-        // ]
+        include: [
+            {
+                model: Pet,
+                attributes: ['id', 'name']
+            }
+        ]
     })
         .then(dbOwnerData => res.json(dbOwnerData))
         .catch(err => {

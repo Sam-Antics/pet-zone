@@ -2,7 +2,12 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
-class Staff extends Model { }
+
+class Staff extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 Staff.init(
   {
@@ -19,6 +24,21 @@ Staff.init(
     salary: {
       type: DataTypes.DECIMAL
     },
+    staff_email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [6]
+      }
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -33,7 +53,7 @@ Staff.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'staff'
-});
+  });
 
 
 module.exports = Staff;

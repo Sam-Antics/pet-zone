@@ -391,12 +391,6 @@ figure figcaption {
     color: var(--button-primary);
 }
 
-@media screen and (min-width: 1600px) {
-    .main {
-        max-width: 1540px;
-    }
-}
-
 @media screen and (max-width: 900px) {
     .container {
         max-width: 800px;

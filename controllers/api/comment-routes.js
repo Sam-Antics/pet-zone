@@ -1,10 +1,14 @@
 const router = require("express").Router();
 const { Comment, User, Pet } = require("../../models");
-const { findAll } = require("../../models/users");
 
+//gets all the comments
 router.get("/", (req, res) => {
   Comment.findAll({
     attributes: ["id", "title", "comment_text"],
+    where: {
+      model: User,
+      attribute: 'username'
+    }
   })
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
@@ -29,6 +33,8 @@ router.post("/", (req, res) => {
 
 });
 
+
+// possible duplicate will have to take a look later on today
 router.get("/", (req, res) => {
   Comment.findAll({
     where: {
@@ -45,14 +51,14 @@ router.get("/", (req, res) => {
     include: [
       {
         model: User,
-        attributes: ["email"],
+        attributes: ["username"],
       },
     ],
   })
     .then((dbCommentData) => {
       // serialize data before passing to template
-      const posts = dbCommentData.map((post) => comment.get({ plain: true }));
-      res.render("comments", { comment, loggedIn: true });
+      const comment = dbCommentData.map((comment) => comment.get({ plain: true }));
+      res.render("comment", { comment, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);

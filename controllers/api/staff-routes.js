@@ -1,10 +1,14 @@
 const router = require('express').Router();
-const { Staff } = require('../../models');
+const { Staff, User } = require('../../models');
+// const managerAuth = require('../../utils')
 
 
 //gets all staff
 router.get("/", (req, res) => {
     Staff.findAll({
+        include: {
+            model: User
+        }
     })
     .then(dbStaffData => res.json(dbStaffData))
     .catch(err => {
@@ -69,28 +73,23 @@ router.put('/:id', (req, res) => {
 
 //login route for a staff
 router.post('/login', (req, res) => {
-    // expects { "email": "voldemort@gmail.com", "password": "password1234"}
     Staff.findOne({
         where: {
-            email: req.body.email
+            staff_email: req.body.staff_email,
+            password: req.body.password
         }
     })
-        .then(dbUserData => {
-            if (!dbUserData) {
-                res.status(404).json({ message: 'No user with that email address!' });
-                return;
-            }
-            const validPassword = dbUserData.checkPassword(req.body.password);
-            if (!validPassword) {
-                res.status(404).json({ message: 'Incorrect password!' });
+        .then(dbStaffData => {
+            if (!dbStaffData) {
+                res.status(404).json({ message: 'No Staff with that email address!' });
                 return;
             }
             req.session.save(() => {
-                req.session.user_id = dbUserData.id;
-                req.session.email = dbUserData.email;
-                req.session.loggedIn = true;
+                req.session.user_id = dbStaffData.id;
+                req.session.staff_email = dbStaffData.staff_email;
+                req.session.staffLoggedIn = true;
 
-                res.json({ user: dbUserData, message: 'You are now logged in!' });
+                res.json({ user: dbStaffData, message: 'You are now logged in!' });
             });
         });
 });

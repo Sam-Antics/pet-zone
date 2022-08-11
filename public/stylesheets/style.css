@@ -4,6 +4,7 @@
     --tertiary: #962217;
     --light-dark: #f5f6e0;
     --dark: #150721;
+    --button-primary: #580f97;
     --border-radius: 10px;
 }
 
@@ -20,11 +21,6 @@ body {
     line-height: 1.5;
     font-size: 14px;
 }
-
-/* main {
-    margin: 5% auto;
-    width: 94%;
-} */
 
 header {
     /* background-image: linear-gradient(to bottom, #7b2cbf, #f5f6e0); */
@@ -70,7 +66,7 @@ a:hover {
 }
 
 p {
-    margin: 3rem;
+    margin: 1rem;
 }
 
 .hero {
@@ -106,8 +102,6 @@ p {
 .landing-div {
     display: flex;
     align-items: center;
-    text-align: center;
-    color: var(--light-dark);
 }
 
 /* SWIPER PHOTO GALLERY */
@@ -124,7 +118,6 @@ p {
   align-items: center;
   text-align: center;
   font-size: 18px;
-  button-color: var(--secondary);
 }
 
 .swiper-button-prev {
@@ -172,6 +165,20 @@ p {
     background-color: var(--light-dark);
 }
 
+
+/* Staff Dashboard */
+#view-owner-pop-up {
+  background: var(--light-dark);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
 /* 404 page */
 
 .errpage {
@@ -197,19 +204,19 @@ p {
     display: block;
     margin: 5px 0;
     border-radius: var(--border-radius);
-    color: var(--primary);
+    color: var(--light-dark);
     border: none;
     outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--dark);
+    background-color: var(--button-primary);
+    box-shadow: 3px 3px var(--secondary);
     transform: translate(-1px, -1px);
 }
 
 .btn:hover {
-    color: var(--primary);
-    background-color: var(--tertiary);
+    color: var(--dark);
+    background-color: var(--secondary);
     transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+    box-shadow: 2px 2px var(--tertiary);
 }
 
 .btn-inline {
@@ -249,12 +256,6 @@ p {
     padding: 0px 0px 20px;
 }
 
-/* CAROUSEL */
-.carousel-item {
-    width: 200px;
-    height: 200px;
-}
-
 /* animations */
 .square {
     position: relative;
@@ -281,6 +282,7 @@ p {
     height: 20%;
 }
 
+.staff-login-form,
 .login-form,
 .signup-form {
     width: 60%;
@@ -298,6 +300,36 @@ p {
 .form-div {
     display: flex;
     justify-content: center;
+}
+
+#add-staff-form {
+    display: none;
+}
+
+#add-owner-form {
+    display: none;
+}
+
+#add-pet-form {
+    display: none;
+}
+
+#vw-owner-form {
+  display: none;
+}
+
+#vw-pet-form {
+    display: none;
+}
+
+#add-appt-form {
+    display: none;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: 525;
+  color: var(--button-primary);
 }
 
 @media screen and (min-width: 1600px) {

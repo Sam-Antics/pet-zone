@@ -1,3 +1,4 @@
+//slides the animals across the screen
 anime({
     targets: '.square',
     keyframes: [
@@ -12,6 +13,7 @@ anime({
 });
 
 
+//this allow images to jump up and down on the screen
 anime({
   targets: '.tiny-square',
   keyframes: [

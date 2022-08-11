@@ -1,79 +1,84 @@
 <div class="container">
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <div class="card your-pets">
-                <h3 class="card-header text-uppercase">Your pets</h3>
-            </div>
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <div class="card your-pets">
+        <h3 class="card-header text-uppercase">Your Pets</h3>
+      </div>
 
-            <div class="card">
-                <h3 class="card-header text-uppercase">Options</h3>
-                <div class="card-body" id="language-buttons">
-                    <button class="btn" data-language="javascript">Add A Pet</button>
-                    <button class="btn" data-language="html">View A Pet</button>
-                    <button class="btn" data-language="css">Set an appointment</button>
-                </div>
-            </div>
+      <div class="card">
+        <h3 class="card-header text-uppercase">Options</h3>
+        <div class="card-body" id="language-buttons">
+          <button class="btn" data-language="javascript">Add a Pet</button>
+          <button class="btn" data-language="html">View a Pet</button>
+          <button class="btn" data-language="css">Set an Appointment</button>
         </div>
-        <div class="col-md-2"></div>
-        <div class="col-12 col-md-6">
-            <div class="card pet-info">
-            <h2 class="subtitle">Your Pet Info <span id="repo-search-term"></span></h2>
-            <div id="repos-container" class="list-group"></div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-2"></div>
+    <div class="col-12 col-md-6">
+      <div class="card pet-info">
+        <h2 class="subtitle">Your Pet Info <span id="repo-search-term"></span></h2>
+        <div id="repos-container" class="list-group"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="col-md-2"></div>
+    <div class="col-12 col-md-6">
+      <div class="card pet-info">
+        <h2 class="subtitle">Your Pet Info <span id="repo-search-term"></span></h2>
+        <div id="repos-container" class="list-group"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <main>
   <!-- View comments by user -->
-    <div class="card">
-  <div class="card-header">
-    <h3>PetPortal comment</h3>
+  <!-- this link to the partial -->
+  <div class="card">
+    <div class="card-header">
+      <h3>PetPortal Comment</h3>
+    </div>
+     <article>
+    {{#if comments.length}}
+    <section>
+      <h2>Your Comments</h2>
+      <ol>
+        {{#each comments as |comment|}}
+        <li>
+          {{>comment-info}}
+        </li>
+        {{/each}}
+      </ol>
+    </section>
+    {{/if}}
+  </article>
+</main>
+
   </div>
-  <div class="card-body">
-    <h5 class="card-title">{{ comment.title }}</h5>
-    <p class="card-text">{{ comment.comment_text }} <span>{{comment.created_at}}</span></p>
-    <a href="#" class="btn btn-primary w-25 mb-0">add a reply</a>
-  </div>
-</div>
-<!-- Enter a new comment -->
-<header>
-  <h4>Create a new comment</h4>
-</header>
+  <!-- Enter a new comment -->
+  <header>
+    <h4>Create a New Comment</h4>
+  </header>
   <form class="comment-form">
     <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Title</label>
-  <input name="comment-title" type="title" class="form-control" id="exampleFormControlInput1" placeholder="enter title">
-</div>
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input name="comment-title" type="title" class="form-control" id="exampleFormControlInput1"
+        placeholder="enter title">
+    </div>
     <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
-  <textarea name="comment-body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  <button type="submit" class="btn btn-primary w-50">add comment</button>
-</div>
-      {{!-- <div>Enter a comment</div>
-      <input type="submit" class="comment-title"></input>
-      <textarea name="comment-body"></textarea>
-    
-    </form> --}}
+      <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+      <textarea name="comment-body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <button type="submit" class="btn btn-primary w-50">add comment</button>
+    </div>
+    {{!-- <div>Enter a comment</div>
+    <input type="submit" class="comment-title"></input>
+    <textarea name="comment-body"></textarea>
+
+  </form> --}}
   </form>
 </main>
 
-<article>
-
-{{#if comments.length}}
-<section>
-  <h2>Your Comments</h2>
-  <ol>
-    {{#each comments as |comment|}}
-    <li>
-      {{> comment-info comment}}
-      {{!-- <a href="/dashboard/edit/{{comment.id}}" class="edit-link">Edit post</a> --}}
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-</article>
 <script src="/javascript/comments.js"></script>

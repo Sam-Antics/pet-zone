@@ -20,68 +20,49 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.get("/staffportal", (req,res) => {
-  res.render("staff");
+//renders staff page
+router.get("/stafflogin", (req, res) => {
+  if (req.session.staffLoggedIn) {
+    res.redirect("staffportal")
+  }
+  res.render("stafflogin");
 })
 
-//comment routes
-router.get("/comments/:id", (req, res) => {
-  //    res.render('comments');
-  Comment.findOne({
-    where: {
-      id: req.params.id,
-    },
-    attributes: ["id", "title", "comment_text", "created_at", "user_id"],
-    include: [
-      {
-        model: User,
-        attributes: ["email"],
-      },
-    ],
-  })
-    .then((dbCommentData) => {
-      if (!dbCommentData) {
-        res.status(404).json({ message: "No comments found" });
-        return;
-      }
-      const comment = dbCommentData.get({ plain: true });
-      res.render("comments", { comment });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+//render and redirects to staff dashboard but need to fix issue being able to route to staffdashboard with a button
+router.get("/staffportal", (req, res) => {
+  if (!req.session.staffLoggedIn) {
+    res.redirect('/stafflogin')
+  }
+  res.render("staffportal")
+})
 
-router.get("/", (req, res) => {
-  Comment.FindAll({
-    where: {
-      // use the ID from the session
-      user_id: req.session.user_id,
-    },
-    attributes: [
-      "id",
-      "comment_text",
-      "title",
-      "created_at",
-      
-    ],
-    include: [
-      {
-        model: User,
-        attributes: ["email"],
-      },
-    ],
-  })
-    .then((dbCommentData) => {
-      // serialize data before passing to template
-      const comments = dbCommentData.map((comment) => comment.get({ plain: true }));
-      res.render("comments", { comments, loggedIn: true });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+//comment routes -- not sure what this one does.. was able to comment this one out and the one in the dashboard routes is the one that allows rendering.
+// router.get("/comments/:id", (req, res) => {
+//   //    res.render('comments');
+//   Comment.findOne({
+//     where: {
+//       id: req.params.id,
+//     },
+//     attributes: ["id", "title", "comment_text", "created_at", "user_id"],
+//     include: [
+//       {
+//         model: User,
+//         attributes: ["email"],
+//       },
+//     ],
+//   })
+//     .then((dbCommentData) => {
+//       if (!dbCommentData) {
+//         res.status(404).json({ message: "No comments found" });
+//         return;
+//       }
+//       const comment = dbCommentData.get({ plain: true });
+//       res.render("comments", { comment });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 module.exports = router;

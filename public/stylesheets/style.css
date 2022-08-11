@@ -29,6 +29,13 @@ header {
     font-size: 26px;
 }
 
+ul li {
+    list-style-type: none;
+    text-align: left;
+    padding: 5px;
+    margin:0;
+}
+
 footer {
     border-top: 1px solid #ccc;
     display: flex;

@@ -20,8 +20,12 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.get("/staffportal", (req,res) => {
+router.get("/staffportal", (req, res) => {
   res.render("staff");
+})
+
+router.get("/staffdashboard", (req, res) => {
+res.render("staffdashboard")
 })
 
 //comment routes
@@ -53,35 +57,35 @@ router.get("/comments/:id", (req, res) => {
     });
 });
 
-router.get("/", (req, res) => {
-  Comment.FindAll({
-    where: {
-      // use the ID from the session
-      user_id: req.session.user_id,
-    },
-    attributes: [
-      "id",
-      "comment_text",
-      "title",
-      "created_at",
+// router.get("/", (req, res) => {
+//   Comment.FindAll({
+//     where: {
+//       // use the ID from the session
+//       user_id: req.session.user_id,
+//     },
+//     attributes: [
+//       "id",
+//       "comment_text",
+//       "title",
+//       "created_at",
       
-    ],
-    include: [
-      {
-        model: User,
-        attributes: ["email"],
-      },
-    ],
-  })
-    .then((dbCommentData) => {
-      // serialize data before passing to template
-      const comments = dbCommentData.map((comment) => comment.get({ plain: true }));
-      res.render("comments", { comments, loggedIn: true });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+//     ],
+//     include: [
+//       {
+//         model: User,
+//         attributes: ["email"],
+//       },
+//     ],
+//   })
+//     .then((dbCommentData) => {
+//       // serialize data before passing to template
+//       const comments = dbCommentData.map((comment) => comment.get({ plain: true }));
+//       res.render("comments", { comments, loggedIn: true });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 module.exports = router;

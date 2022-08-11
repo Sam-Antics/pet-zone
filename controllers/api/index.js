@@ -11,7 +11,7 @@ router.use('/users', userRoutes);
 router.use('/staff', staffRoutes);
 router.use('/pets', petRoutes);
 // router.use('/immunizations', immunizationRoutes);
-router.use('/owner', ownerRoutes);
+router.use('/owners', ownerRoutes);
 router.use('/comments', commentRoutes);
 
 module.exports = router;

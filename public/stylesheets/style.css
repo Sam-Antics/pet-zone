@@ -29,6 +29,10 @@ header {
     font-size: 26px;
 }
 
+title {
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
 ul li {
     list-style-type: none;
     text-align: left;
@@ -84,6 +88,8 @@ p {
 }
 
 .app-title {
+    font-family: Copperplate, Papyrus, fantasy;
+    color: --dark;
     display: flex;
     margin: 25px 150px 25px 0px;
     padding: 0px 50px 0px 0px;
@@ -333,7 +339,7 @@ figure figcaption {
     display: none;
 }
 
-#add-pet-form {
+.add-pet-form {
     display: none;
 }
 
@@ -347,6 +353,29 @@ figure figcaption {
 
 #add-appt-form {
     display: none;
+}
+
+.submit-btn {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    color: var(--dark);
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    box-shadow: 3px 3px var(--secondary);
+    transform: translate(-1px, -1px);
+}
+
+.submit-btn:hover {
+    color: var(--light-dark);
+    background-color: var(--button-primary);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px var(--tertiary);
 }
 
 .subtitle {

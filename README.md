@@ -10,7 +10,7 @@ Project 2
 5. [Authors](#authors)
 
 ## Project Description
-PetZone is a web-based veterinary client management system which allows vet clinic staff to warehouse client records, as well as interact with the client and drive engagement with the practice.
+PetPortal is a web-based veterinary client management system which allows vet clinic staff to warehouse client records, as well as interact with the client and drive engagement with the veterinary practice.
 
 ### User Story
 ```

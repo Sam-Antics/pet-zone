@@ -1,4 +1,4 @@
-// Staff Buttons
+// STAFF BUTTONS
 function addStaffBtnHandler(event) {
   event.preventDefault();
 
@@ -27,7 +27,7 @@ function viewStaffBtnHandler(event) {
   }
 }
 
-// Owner Buttons
+// OWNER BUTTONS
 function addOwnerBtnHandler(event) {
   event.preventDefault();
 
@@ -58,7 +58,7 @@ function viewOwnerBtnHandler(event) {
 
 }
 
-// Pet Buttons
+// PET BUTTONS
 function addPetBtnHandler(event) {
   event.preventDefault();
 
@@ -88,7 +88,18 @@ function viewPetBtnHandler(event) {
   }
 }
 
-// Appointment Button
+// PET FORMS
+function addPetFormhandler(event) {
+  event.preventDefault();
+
+  const petName = document.querySelector('#pet-input').value.trim();
+
+  if (petName) {
+    console.log('You got it!');
+  }
+}
+
+// APPOINTMENT BUTTON
 function setApptBtnHandler(event) {
   event.preventDefault();
 
@@ -111,6 +122,7 @@ document.querySelector('#add-owner').addEventListener('click', addOwnerBtnHandle
 document.querySelector('#view-owner').addEventListener('click', viewOwnerBtnHandler);
 
 document.querySelector('#add-pet').addEventListener('click', addPetBtnHandler);
+document.querySelector('#add-pet-form').addEventListener('submit', AddPetFormHandler);
 document.querySelector('#view-pet').addEventListener('click', viewPetBtnHandler);
 
 document.querySelector('#add-appt').addEventListener('click', setApptBtnHandler);

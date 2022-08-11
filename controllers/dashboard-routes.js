@@ -9,6 +9,8 @@ const withAuth = require('../utils/auth');
 //     })
 // });
 
+
+//fix route to be able to render comments in dashboard
 router.get('/', withAuth, (req, res) => {
     Comment.findAll({
       where: {

@@ -26,7 +26,7 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
+        isEmail: true
       },
     },
     first_name: {
@@ -41,8 +41,8 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6],
-      },
+        len: [6]
+      }
     }
   },
   {

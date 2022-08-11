@@ -282,6 +282,7 @@ p {
     height: 20%;
 }
 
+.staff-login-form,
 .login-form,
 .signup-form {
     width: 60%;

@@ -27,32 +27,34 @@
 
         {{!-- Pet Buttons --}}
         <button class="btn add-pet" id="add-pet">Add a Pet</button>
-      <div class="form-input" id="add-pet-form">
+      <div class="add-pet-form form-input" >
           <div>
-            <input class="form-label" placeholder="Pet Name" type="text" id="pet-name-input" />
+            <input name="pet-name" class="form-label" placeholder="Pet Name" type="text" />
           </div>
           <div>
-            <input class="form-label" placeholder="Pet Type" type="text" id="pet-type-input" />
+            <input name="pet-type"class="form-label" placeholder="Pet Type" type="text" />
           </div>
           <div>
-            <input class="form-label" placeholder="Pet Breed" type="text" id="pet-breed-input" />
+            <input name="pet-breed" class="form-label" placeholder="Pet Breed" type="text" />
           </div>
           <div>
-            <input class="form-label" placeholder="Pet Age" type="integer" id="pet-age-input" />
+            <input name="pet-age" class="form-label" placeholder="Pet Age" type="number" />
           </div>
           <div>
-            <input class="form-label" placeholder="Color" type="text" id="pet-color-input" />
+            <input name="pet-color" class="form-label" placeholder="Color" type="text" />
           </div>
           <div>
-            <input class="form-label" placeholder="Owner ID" type="integer" id="pet-owner-input" />
+            <input name="pet-owner" class="form-label" placeholder="Owner ID" type="number" />
           </div>
           <div>
-            <button class="btn" id="submit-btn" type="submit">submit pet!</button>
+            <button id="pet-submit" class="btn submit-btn" type="submit">submit pet!</button>
           </div>
       </div>
 
         <button class="btn view-pet" id="view-pet">View a Pet</button>
-       
+        <form id="vw-pet-form">
+          <input class="form-label" type="text" placeholder="Pet Name" id="get-pet-name"/>
+        </form>
 
         {{!-- Appt Button --}}
         <button class="btn set-appt" id="add-appt">Set an Appointment</button>
@@ -71,7 +73,7 @@
 
 <script src="/javascript/staffintro.js"></script>
 <script src="/javascript/staffportal.js"></script>
-
+<script src="/javascript/staffportalsubmit.js"></script>
 
 
 

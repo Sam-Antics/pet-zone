@@ -332,7 +332,7 @@ color: var(--dark) !important;
     display: none;
 }
 
-#add-pet-form {
+.add-pet-form {
     display: none;
 }
 
@@ -348,7 +348,7 @@ color: var(--dark) !important;
     display: none;
 }
 
-#submit-btn {
+.submit-btn {
     font-size: 1.3rem;
     text-decoration: none;
     padding: 6px 5px;
@@ -364,7 +364,7 @@ color: var(--dark) !important;
     transform: translate(-1px, -1px);
 }
 
-#submit-btn:hover {
+.submit-btn:hover {
     color: var(--light-dark);
     background-color: var(--button-primary);
     transform: translate(0, 0);

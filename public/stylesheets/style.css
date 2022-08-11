@@ -348,6 +348,29 @@ color: var(--dark) !important;
     display: none;
 }
 
+#submit-btn {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    color: var(--dark);
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    box-shadow: 3px 3px var(--secondary);
+    transform: translate(-1px, -1px);
+}
+
+#submit-btn:hover {
+    color: var(--light-dark);
+    background-color: var(--button-primary);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px var(--tertiary);
+}
+
 .subtitle {
   text-align: center;
   font-weight: 525;

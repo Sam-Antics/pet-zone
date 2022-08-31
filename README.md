@@ -6,8 +6,9 @@ Project 2
 1. [Project Description](#project-description)
 2. [Deployed Website](#deployed-website)
 3. [Built With](#built-with)
-4. [Future Development](#future-development)
-5. [Authors](#authors)
+4. [Usage](#usage)
+5. [Future Development](#future-development)
+6. [Authors](#authors)
 
 ## Project Description
 PetPortal is a web-based veterinary client management system which allows vet clinic staff to warehouse client records, as well as interact with the client and drive engagement with the veterinary practice.
@@ -50,6 +51,10 @@ Deployed URL: <br/><br/>
 - dotenv npm package
 - [Swiper](https://swiperjs.com/swiper-api)
 - [AnimeJS](https://animejs.com/)
+
+## Usage
+Demo of the PetPortal website. <br>
+![PetPortal](https://user-images.githubusercontent.com/101689362/187785727-24fd013f-3657-4b31-a26f-7a9d47ebcd2e.gif)
 
 ## Future Development
 
